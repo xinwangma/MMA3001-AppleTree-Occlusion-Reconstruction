@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module apple_tree_project.metrics</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="apple_tree_project.html" class="white">apple_tree_project</a>.metrics</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/mnt/data/MMA3001_AppleTree_Occlusion_Project_STEP1/src/apple_tree_project/metrics.py">/mnt/data/MMA3001_AppleTree_Occlusion_Project_STEP1/src/apple_tree_project/metrics.py</a></td></tr></table>
+    <p><span class="code">Explicit&nbsp;binary-mask&nbsp;metrics&nbsp;for&nbsp;the&nbsp;future&nbsp;2D&nbsp;branch&nbsp;completion&nbsp;study.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="numpy.html">numpy</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-binary_scores"><strong>binary_scores</strong></a>(prediction: 'np.ndarray', reference: 'np.ndarray') -&gt; 'dict[str, float]'</dt><dd><span class="code">Compute&nbsp;precision,&nbsp;recall,&nbsp;F1&nbsp;and&nbsp;IoU&nbsp;against&nbsp;a&nbsp;binary&nbsp;ground&nbsp;truth.<br>
+&nbsp;<br>
+Empty&nbsp;prediction&nbsp;and&nbsp;reference&nbsp;are&nbsp;assigned&nbsp;perfect&nbsp;scores&nbsp;(1.0),&nbsp;while&nbsp;a<br>
+nonempty&nbsp;prediction&nbsp;against&nbsp;empty&nbsp;truth&nbsp;has&nbsp;recall&nbsp;1.0&nbsp;and&nbsp;precision&nbsp;0.0.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;prediction:&nbsp;Predicted&nbsp;H&nbsp;x&nbsp;W&nbsp;mask.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;reference:&nbsp;Ground-truth&nbsp;H&nbsp;x&nbsp;W&nbsp;mask.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;with&nbsp;precision,&nbsp;recall,&nbsp;f1,&nbsp;iou&nbsp;(unitless&nbsp;values&nbsp;0..1).<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;shapes&nbsp;or&nbsp;mask&nbsp;contents&nbsp;are&nbsp;incompatible.</span></dd></dl>
+ <dl><dt><a name="-hidden_branch_recall"><strong>hidden_branch_recall</strong></a>(
+    prediction: 'np.ndarray',
+    visible: 'np.ndarray',
+    whole_reference: 'np.ndarray'
+) -&gt; 'float'</dt><dd><span class="code">Fraction&nbsp;of&nbsp;truly&nbsp;hidden&nbsp;branch&nbsp;pixels&nbsp;recovered&nbsp;by&nbsp;the&nbsp;prediction.<br>
+&nbsp;<br>
+Hidden-reference&nbsp;region&nbsp;is&nbsp;``whole_reference&nbsp;&amp;&nbsp;~visible``.&nbsp;This&nbsp;metric<br>
+uses&nbsp;the&nbsp;*ground-truth&nbsp;visible&nbsp;mask&nbsp;for&nbsp;evaluation&nbsp;only*;&nbsp;never&nbsp;feed<br>
+``whole_reference``&nbsp;to&nbsp;a&nbsp;method&nbsp;during&nbsp;inference.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;prediction:&nbsp;H&nbsp;x&nbsp;W&nbsp;predicted&nbsp;complete-branch&nbsp;mask.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;visible:&nbsp;H&nbsp;x&nbsp;W&nbsp;ground-truth&nbsp;visible-branch&nbsp;mask.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;whole_reference:&nbsp;H&nbsp;x&nbsp;W&nbsp;ground-truth&nbsp;complete-branch&nbsp;mask.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Recall&nbsp;in&nbsp;[0,&nbsp;1];&nbsp;1.0&nbsp;if&nbsp;reference&nbsp;has&nbsp;no&nbsp;hidden&nbsp;pixels.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;mask&nbsp;shapes&nbsp;differ&nbsp;or&nbsp;visible&nbsp;mask&nbsp;is&nbsp;not&nbsp;a&nbsp;subset<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;the&nbsp;whole-branch&nbsp;ground&nbsp;truth.</span></dd></dl>
+ <dl><dt><a name="-to_mask"><strong>to_mask</strong></a>(image: 'np.ndarray') -&gt; 'np.ndarray'</dt><dd><span class="code">Convert&nbsp;a&nbsp;single-channel&nbsp;numeric&nbsp;label&nbsp;image&nbsp;into&nbsp;a&nbsp;boolean&nbsp;mask.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;image:&nbsp;H&nbsp;x&nbsp;W&nbsp;integer,&nbsp;float&nbsp;or&nbsp;boolean&nbsp;label&nbsp;array.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;x&nbsp;W&nbsp;binary&nbsp;array;&nbsp;positive&nbsp;pixels&nbsp;are&nbsp;foreground.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;If&nbsp;not&nbsp;a&nbsp;finite,&nbsp;single-channel,&nbsp;two-dimensional&nbsp;image.</span></dd></dl>
+</td></tr></table>
+</body></html>

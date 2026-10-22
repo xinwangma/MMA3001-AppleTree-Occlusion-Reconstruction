@@ -1,0 +1,2 @@
+sample_id,season,tree_id,rgb_path,depth_path,visible_mask_path,whole_mask_path,calibration_path
+synthetic_y_001,winter,fixture_y_1,rgb.png,depth.png,visible.png,whole.png,calibration.json

@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.py[cod]
+*.egg-info/
+results/*
+!results/.gitkeep
+# Do not commit the raw Monash dataset before checking its licence and usage terms.
+data/raw/
+data/processed/
+data/manifest.csv
+.DS_Store
