@@ -1,5 +1,10 @@
 ﻿# Step 3 real-RGB diagnostics and manual review workflow
 
+Update (2026-10-23): the original run below is preserved. See
+[Step 3 annotation revision](13_step3_annotation_revision.md) for the current
+zoomable editor, separate review/approval, final v4 before/after figures, quality
+checks and 63-test result. Its editor/workflow instructions supersede those below.
+
 Date: 23 October 2026. Scope: real RGB inputs with RGB-only polygon **drafts**,
 existing skeleton extraction, connectivity checks, figures and timing. This is not
 an independently human-validated accuracy study. Step 4 has not been started.

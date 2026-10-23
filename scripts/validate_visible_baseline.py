@@ -16,7 +16,7 @@ import numpy as np
 from PIL import Image,ImageDraw
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from apple_tree_project.baseline import visible_only_baseline
-from apple_tree_project.visible_annotation import rasterize,verify_source
+from apple_tree_project.visible_annotation import rasterize,verify_source,quality_checks
 ROOT=Path(__file__).resolve().parents[1]
 
 
@@ -104,7 +104,7 @@ def run(bundle_path,output,include_drafts=False,repeats=5):
     if output.exists():raise ValueError('New output directory required; preserve previous runs')
     if not 1<=repeats<=100:raise ValueError('repeats must be 1..100')
     data=bundle_path.read_bytes();bundle=json.loads(data.decode('utf-8-sig'))
-    samples=bundle['samples']
+    samples=bundle.get('samples',[bundle])
     if not samples:raise ValueError('No annotations')
     ids=[s['sample_id'] for s in samples]
     if len(set(ids))!=len(ids) or any(not sid.replace('_','').isalnum() for sid in ids):
@@ -112,7 +112,7 @@ def run(bundle_path,output,include_drafts=False,repeats=5):
     sources={}
     for annotation in samples:
         if annotation['review_status']!='accepted' and not include_drafts:
-            raise ValueError('Pending annotations require --include-drafts; not reviewed validation')
+            raise ValueError('Unapproved annotations require --include-drafts; not approved validation')
         if annotation['review_status']=='rejected':raise ValueError('Rejected annotation must not run')
         path=(ROOT/annotation['rgb_path']).resolve(strict=True)
         if output in path.parents:raise ValueError('Output contains source RGB')
@@ -143,6 +143,7 @@ def run(bundle_path,output,include_drafts=False,repeats=5):
                     visible_pixels=int((mask>0).sum()),skeleton_pixels=int(result['skeleton'].sum()),
                     median_inference_seconds=statistics.median(durations),timing_seconds=durations,**measures)
         (directory/'diagnostics.json').write_text(json.dumps(detail,indent=2),encoding='utf-8')
+        (directory/'quality_checks.json').write_text(json.dumps(quality_checks(mask,result['graph'],annotation.get('checkpoints',[])),indent=2),encoding='utf-8')
         details.append(detail)
         rows.append({k:v for k,v in detail.items() if k not in ('patches','timing_seconds')})
     contact=Image.new('RGB',(1280,278*((len(samples)+3)//4)),'white')
@@ -160,6 +161,8 @@ def run(bundle_path,output,include_drafts=False,repeats=5):
     with (output/'summary.csv').open('w',newline='',encoding='utf-8') as f:
         writer=csv.DictWriter(f,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
     summary=dict(sample_count=len(rows),accepted_human_review_count=sum(s['review_status']=='accepted' for s in samples),
+        manually_reviewed_count=sum(s['review_status'] in ('reviewed','accepted') for s in samples),
+        draft_count=sum(s['review_status']=='pending' for s in samples),
         note='RGB-only draft diagnostics, not real anatomical accuracy; patch survival is not branch recall.',
         annotation_bundle_sha256=hashlib.sha256(data).hexdigest(),
         runtime_scope='NumPy thinning plus pixel graph, one warmup then repeats; excludes annotation, IO and figures',

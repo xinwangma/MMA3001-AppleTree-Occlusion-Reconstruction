@@ -50,3 +50,18 @@ reviewed the 12-panel contact sheet plus six detailed outputs, and documented
 annotation gaps and graft-induced skeleton spur. 50 tests pass. Independent
 human drawing/review and anatomical accuracy assessment are still required;
 no annotator agreement or real accuracy results were invented.
+
+
+## Entry 004 ? Step 3 coverage correction (2026-10-23)
+
+Codex reviewed all 12 real RGBs and the old partial masks, improved the manual
+editor and review/approval workflow, added QA/tests and generated final v4
+before/after outputs. Important rejected AI work: initial v2 candidates overlapped
+leaves, fruit or ground vegetation on magnified inspection; v3 polygon additions
+created tiny loops/spurs at joins. Those runs are explicitly superseded. Final v4
+uses narrower RGB-supported pieces and explicit right-arm replacements; 10 images
+changed and 2 stayed unchanged due to ambiguity. All final labels remain AI drafts,
+not student drawing or independent human review. More visible pixels do not prove
+accuracy. No Summer GT/depth was used to make masks, no hidden connections were
+added and no original RGB-D was written. 63 tests pass; human usability and full
+coverage review still require actual people. Details: docs/13_step3_annotation_revision.md.

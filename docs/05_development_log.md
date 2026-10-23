@@ -40,3 +40,14 @@ skeleton pixels. Median sample-median inference 196.8 ms; broad graft draft
 R06N02 produced a spur. 50 tests passed. No real accuracy or human acceptance is
 claimed. Details: docs/12_step3_real_data_review.md. Baseline algorithms unchanged;
 no Step 4, commit or push.
+
+
+## 2026-10-23 ? Step 3 annotation coverage revision
+
+Reviewed all 12 RGBs and draft masks at native/cropped scale. Final v4 conservatively
+revises 10 samples and retains R03N02/R12N02 because of ambiguity. Added zoom/pan,
+vertex editing, overlay and visible/occluded checkpoints to the editor; separate
+human review and approval records; heuristic QA and before/after outputs. Rejected
+preflight polygons that crossed leaves/fruit/vegetation and corrected polygon-join
+artifacts. 63 tests pass. All 12 final annotations remain AI DRAFT; no real accuracy
+claim, source changes, occlusion completion, commit or push. See docs/13_step3_annotation_revision.md.

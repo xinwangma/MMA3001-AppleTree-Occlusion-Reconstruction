@@ -65,3 +65,17 @@ runs used 12 AI-authored draft masks, not human truth. Component correspondence
 and pixel-subset checks passed; this establishes no real anatomical accuracy.
 See [real-RGB findings](12_step3_real_data_review.md). GUI interaction awaits a
 human check; CLI help and GUI-independent backend were exercised.
+
+
+## Step 3 coverage revision ? 2026-10-23
+
+Complete suite: **63 passed** (50 previous plus 13 new cases). PYTHONPATH includes
+results/test_dependencies and src; command: python -m pytest -q. New cases cover
+missing-trunk/occlusion point checks, absence of coverage evidence, invalid points,
+nonmutating fragment/spur/endpoint prompts, polygon self-intersection, zoom
+coordinates, separate review/approval/reset gates, and single-editor-JSON QA runs.
+CLI help, Python compilation, final local HTML references and source hashes were
+checked. The 12 final real runs preserve input components, with no outside skeleton
+pixels, isolated pixels or graph cycles. These checks are not independent label
+or anatomical accuracy validation. Human GUI usability acceptance remains pending.
+See [the revision guide](13_step3_annotation_revision.md).

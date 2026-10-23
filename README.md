@@ -195,5 +195,11 @@ RGB polygon editor (`scripts/annotate_visible_branches.py`) and batch diagnostic
 runner (`scripts/validate_visible_baseline.py`) now support reproducible review.
 A 12-image experiment used explicitly AI-authored RGB-only draft polygons, with
 0 human-accepted samples. See [actual diagnostics, commands and limitations](docs/12_step3_real_data_review.md).
-Full suite: 50 tests pass. Independent human real-data accuracy validation remains
+Full suite after coverage-review improvements: 63 tests pass. Independent human real-data accuracy validation remains
 pending; Step 4 has not started.
+
+See the [Step 3 coverage revision guide](docs/13_step3_annotation_revision.md) for
+zoom/pan, vertex editing, visible/occluded checkpoints, separate review/approval,
+graph warnings and final v4 before/after figures. Ten samples received conservative
+visible-wood revisions; two were retained because of ambiguity. All remain DRAFT.
+Open `results/step3_real_validation/coverage_revision_v4/run/index.html` locally.
