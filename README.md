@@ -179,3 +179,8 @@ ChatGPT assisted with the initial requirements interpretation, project scoping, 
 ## 12. Licence
 
 The project scaffold includes an MIT licence for the original source code. This licence **does not** apply to third-party images, annotations, datasets or models. Review the licence choice and data usage restrictions before publication.
+
+### Real-data alignment stage (23 October 2026)
+
+The real dataset inventory is complete; annotation alignment candidates have now been compared on all 562 Summer RGB/GT pairs. See [annotation alignment evidence and baseline decision](docs/10_annotation_alignment.md) and [the existing inventory](docs/09_real_dataset_inspection.md). Full-frame stretch is provisional; a reviewed mismatch prevents claiming universal registration. A 2D visible-only prototype can proceed with independent visible labels, while supervised evaluation and metric 3D remain gated. Generate local comparisons with `python scripts/compare_annotation_alignment.py`; outputs are saved under `results/alignment_candidates/`.
+
