@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module apple_tree_project.alignment</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="apple_tree_project.html" class="white">apple_tree_project</a>.alignment</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="../../src/apple_tree_project/alignment.py">../../src/apple_tree_project/alignment.py</a></td></tr></table>
+    <p><span class="code">Explicit,&nbsp;unverified&nbsp;RGB-to-annotation&nbsp;coordinate&nbsp;hypotheses.<br>
+&nbsp;<br>
+Coordinates&nbsp;use&nbsp;pixel-edge&nbsp;units;&nbsp;a&nbsp;pixel&nbsp;centre&nbsp;is&nbsp;(column&nbsp;+&nbsp;.5,&nbsp;row&nbsp;+&nbsp;.5).<br>
+No&nbsp;transform&nbsp;here&nbsp;is&nbsp;a&nbsp;calibrated&nbsp;or&nbsp;dataset-confirmed&nbsp;registration.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="PIL.Image.html">PIL.Image</a><br>
+</td><td class="multicolumn"><a href="numpy.html">numpy</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-boundary"><strong>boundary</strong></a>(mask)</dt><dd><span class="code">Four-neighbour&nbsp;inner&nbsp;boundary,&nbsp;with&nbsp;outside-image&nbsp;pixels&nbsp;treated&nbsp;as&nbsp;background.</span></dd></dl>
+ <dl><dt><a name="-edge_proxy"><strong>edge_proxy</strong></a>(image, mask)</dt><dd><span class="code">Mean&nbsp;luminance&nbsp;gradient&nbsp;within&nbsp;2&nbsp;pixels&nbsp;of&nbsp;GT&nbsp;boundary;&nbsp;NOT&nbsp;accuracy.</span></dd></dl>
+ <dl><dt><a name="-geometry"><strong>geometry</strong></a>(size, method, target=256)</dt><dd><span class="code">Return&nbsp;(sx,&nbsp;sy,&nbsp;tx,&nbsp;ty)&nbsp;for&nbsp;target&nbsp;=&nbsp;scale&nbsp;*&nbsp;source&nbsp;+&nbsp;offset.</span></dd></dl>
+ <dl><dt><a name="-mask_to_rgb"><strong>mask_to_rgb</strong></a>(mask, size, method)</dt><dd><span class="code">Map&nbsp;a&nbsp;square&nbsp;binary&nbsp;annotation&nbsp;to&nbsp;RGB&nbsp;coordinates&nbsp;using&nbsp;nearest&nbsp;neighbour.</span></dd></dl>
+ <dl><dt><a name="-overlay"><strong>overlay</strong></a>(image, mask)</dt><dd><span class="code">Translucent&nbsp;magenta&nbsp;foreground&nbsp;with&nbsp;yellow&nbsp;inner&nbsp;outline.</span></dd></dl>
+ <dl><dt><a name="-transform_rgb"><strong>transform_rgb</strong></a>(image, method, target=256)</dt><dd><span class="code">Resample&nbsp;RGB&nbsp;onto&nbsp;annotation&nbsp;grid&nbsp;with&nbsp;bilinear&nbsp;interpolation&nbsp;and&nbsp;black&nbsp;fill.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>CANDIDATES</strong> = ('stretch', 'center_crop', 'letterbox')</td></tr></table>
+</body></html>

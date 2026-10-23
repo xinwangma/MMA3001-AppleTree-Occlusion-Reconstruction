@@ -1,6 +1,6 @@
 """MMA3001 Y-shaped apple-tree occlusion reconstruction project.
 
-Step 1 contains data contracts and validation helpers only; reconstruction
-algorithms will be implemented after inspection of the actual dataset.
+Includes data contracts, validation, alignment hypotheses and a mask-assisted
+2D visible-only skeleton prototype. Real-data accuracy and metric 3D are unvalidated.
 """
 __version__ = "0.1.0"

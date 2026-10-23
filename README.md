@@ -2,7 +2,7 @@
 
 **MMA3001 | Numerical Methods and Machine Learning**  
 **Project type:** Individual engineering computing project  
-**Development status:** Step 1 — problem definition, data validation and testing foundation  
+**Development status:** Step 3 - mask-assisted visible-only 2D prototype; real-data evaluation pending
 **Version:** 0.1.0
 
 > **Important:** This is a preliminary, reproducible software foundation. The occluded-branch completion and 3D reconstruction algorithms have **not yet been implemented or validated on the real Monash dataset**. Included images are synthetic input-format fixtures, not genuine apple-tree experimental observations.
@@ -30,7 +30,7 @@ This project investigates whether an **occlusion-aware geometric branch-completi
 
 **Candidate dataset:** Monash University — [Y-shaped Tree Dataset for Tree Branch Prediction](https://www.monash.edu/engineering/lmga/news/y-shaped-tree-dataset-for-tree-branch-prediction).
 
-The published dataset description reports **435 RGB-D images** across summer, autumn and winter, with *position*, *visible-branch* and *whole-branch* annotations. The downloaded file structure, pixel encoding, depth scale, camera calibration and 3D ground-truth availability still need to be verified before implementation is adapted to the real dataset.
+The published dataset description reports **435 RGB-D images** across summer, autumn and winter, with *position*, *visible-branch* and *whole-branch* annotations. The local file structure and pixel encodings have been inventoried. Precise annotation alignment, depth scale and camera calibration remain unresolved; no 3D ground truth was found. See docs/09_real_dataset_inspection.md and docs/10_annotation_alignment.md.
 
 The original dataset is **not redistributed** in this repository; check its applicable terms before storing or sharing data. See [`docs/04_data_integration.md`](docs/04_data_integration.md).
 
@@ -148,8 +148,8 @@ Open the HTML file(s) inside `docs/api/`. API documentation describes the implem
 | Binary prediction metrics | Implemented |
 | Synthetic input-format fixture | Implemented; demonstration only |
 | Automated tests and initial test report | Implemented |
-| Real dataset decoding and calibration | Pending inspection |
-| Visible-only baseline reconstruction | Planned |
+| Real dataset decoding and calibration | Inventory complete; alignment provisional; depth calibration unresolved |
+| Visible-only baseline reconstruction | Implemented: mask-assisted 2D skeleton/pixel graph; synthetic demonstration only |
 | Occluded-branch completion | Planned |
 | Full 3D skeleton reconstruction | Planned |
 | Held-out quantitative model evaluation | Planned |
@@ -184,3 +184,16 @@ The project scaffold includes an MIT licence for the original source code. This 
 
 The real dataset inventory is complete; annotation alignment candidates have now been compared on all 562 Summer RGB/GT pairs. See [annotation alignment evidence and baseline decision](docs/10_annotation_alignment.md) and [the existing inventory](docs/09_real_dataset_inspection.md). Full-frame stretch is provisional; a reviewed mismatch prevents claiming universal registration. A 2D visible-only prototype can proceed with independent visible labels, while supervised evaluation and metric 3D remain gated. Generate local comparisons with `python scripts/compare_annotation_alignment.py`; outputs are saved under `results/alignment_candidates/`.
 
+### Step 3 visible-only baseline
+
+Run `python scripts/run_visible_baseline.py` for the existing synthetic demonstration. Outputs (prediction, skeleton, pixel graph, overlay and provenance report) go to `results/visible_only_baseline/`. See [methods, usage, tests and limitations](docs/11_visible_only_baseline.md). The baseline preserves visible-mask gaps and never reads whole GT. Real-data evaluation requires independent visible labels; precise Summer GT alignment remains unresolved.
+
+### Step 3 real-RGB review
+
+The baseline requires an external visible mask; it does not segment RGB. A native
+RGB polygon editor (`scripts/annotate_visible_branches.py`) and batch diagnostic
+runner (`scripts/validate_visible_baseline.py`) now support reproducible review.
+A 12-image experiment used explicitly AI-authored RGB-only draft polygons, with
+0 human-accepted samples. See [actual diagnostics, commands and limitations](docs/12_step3_real_data_review.md).
+Full suite: 50 tests pass. Independent human real-data accuracy validation remains
+pending; Step 4 has not started.

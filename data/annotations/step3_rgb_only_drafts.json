@@ -1,0 +1,1649 @@
+{
+  "policy": "visible-main-wood-v1",
+  "selection_policy": "Second lexicographic Summer RGB in each row R01..R12; RGB-only convenience coverage, not random/held-out",
+  "warning": "AI-authored RGB-only polygon drafts, NOT manual human labels, NOT reviewed ground truth. Partial conservative coverage only.",
+  "samples": [
+    {
+      "sample_id": "R01N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R01N02_Summer_RGB-12-40-59.png",
+      "rgb_sha256": "aaa91923957d097de2576ac1d9ed682bac96867287de22634e620b46143f40d3",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Lower trunk and exposed left-arm ribbon; leaves interrupt upper arms; draft margins coarse.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              280,
+              440
+            ],
+            [
+              275,
+              422
+            ],
+            [
+              267,
+              408
+            ],
+            [
+              265,
+              390
+            ],
+            [
+              271,
+              372
+            ],
+            [
+              284,
+              356
+            ],
+            [
+              299,
+              340
+            ],
+            [
+              306,
+              344
+            ],
+            [
+              292,
+              362
+            ],
+            [
+              281,
+              379
+            ],
+            [
+              280,
+              397
+            ],
+            [
+              289,
+              413
+            ],
+            [
+              298,
+              430
+            ],
+            [
+              296,
+              447
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              245,
+              394
+            ],
+            [
+              232,
+              386
+            ],
+            [
+              221,
+              370
+            ],
+            [
+              215,
+              348
+            ],
+            [
+              205,
+              316
+            ],
+            [
+              197,
+              281
+            ],
+            [
+              186,
+              250
+            ],
+            [
+              190,
+              243
+            ],
+            [
+              203,
+              278
+            ],
+            [
+              212,
+              312
+            ],
+            [
+              222,
+              345
+            ],
+            [
+              231,
+              371
+            ],
+            [
+              248,
+              388
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R02N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R02N02_Summer_RGB-12-49-19.png",
+      "rgb_sha256": "4f368143c92eb38f1d4ba198ada8b8d814bfa43309601d9a296ea463f29a1820",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Exposed low fork; small right-arm fragment; foliage boundaries and graft knot uncertain.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              307,
+              474
+            ],
+            [
+              295,
+              454
+            ],
+            [
+              293,
+              431
+            ],
+            [
+              296,
+              413
+            ],
+            [
+              288,
+              397
+            ],
+            [
+              267,
+              380
+            ],
+            [
+              240,
+              360
+            ],
+            [
+              221,
+              347
+            ],
+            [
+              216,
+              336
+            ],
+            [
+              226,
+              338
+            ],
+            [
+              248,
+              355
+            ],
+            [
+              278,
+              376
+            ],
+            [
+              296,
+              390
+            ],
+            [
+              305,
+              407
+            ],
+            [
+              309,
+              428
+            ],
+            [
+              325,
+              451
+            ],
+            [
+              333,
+              477
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              307,
+              393
+            ],
+            [
+              316,
+              381
+            ],
+            [
+              335,
+              370
+            ],
+            [
+              350,
+              362
+            ],
+            [
+              354,
+              367
+            ],
+            [
+              334,
+              378
+            ],
+            [
+              319,
+              391
+            ],
+            [
+              311,
+              405
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R03N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R03N02_Summer_RGB-12-57-0.png",
+      "rgb_sha256": "252faad1309064259d2dcdd40ef5fdcf9d1ff63498c23aea019f262653561fb0",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Heavy occlusion; only exposed diagonal arm and small low trunk patch; incomplete coverage.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              305,
+              351
+            ],
+            [
+              315,
+              333
+            ],
+            [
+              334,
+              313
+            ],
+            [
+              356,
+              295
+            ],
+            [
+              374,
+              283
+            ],
+            [
+              377,
+              289
+            ],
+            [
+              360,
+              303
+            ],
+            [
+              342,
+              321
+            ],
+            [
+              325,
+              341
+            ],
+            [
+              317,
+              357
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              291,
+              424
+            ],
+            [
+              292,
+              407
+            ],
+            [
+              297,
+              392
+            ],
+            [
+              304,
+              392
+            ],
+            [
+              302,
+              408
+            ],
+            [
+              302,
+              425
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R04N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R04N02_Summer_RGB-13-3-43.png",
+      "rgb_sha256": "55717e1682566b5072efcd309f864ffbb0e4b2938c270e0a88d51ea5e2e54979",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "White background increases contrast; low trunk and two short arm fragments only.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              382,
+              477
+            ],
+            [
+              376,
+              447
+            ],
+            [
+              369,
+              427
+            ],
+            [
+              372,
+              409
+            ],
+            [
+              374,
+              385
+            ],
+            [
+              382,
+              380
+            ],
+            [
+              395,
+              382
+            ],
+            [
+              400,
+              404
+            ],
+            [
+              401,
+              423
+            ],
+            [
+              397,
+              439
+            ],
+            [
+              405,
+              477
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              376,
+              375
+            ],
+            [
+              360,
+              367
+            ],
+            [
+              347,
+              354
+            ],
+            [
+              333,
+              340
+            ],
+            [
+              337,
+              335
+            ],
+            [
+              353,
+              348
+            ],
+            [
+              366,
+              358
+            ],
+            [
+              380,
+              365
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_3",
+          "points": [
+            [
+              397,
+              370
+            ],
+            [
+              402,
+              356
+            ],
+            [
+              403,
+              342
+            ],
+            [
+              408,
+              329
+            ],
+            [
+              414,
+              331
+            ],
+            [
+              409,
+              347
+            ],
+            [
+              408,
+              361
+            ],
+            [
+              403,
+              376
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R05N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R05N02_Summer_RGB-13-9-43.png",
+      "rgb_sha256": "56fd3bf15a113f8a54bd158edba9658d2888a971a80d6117caed4718c8402b83",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Bent trunk, narrow arm pieces and large graft knot; leaves divide visible support.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              306,
+              473
+            ],
+            [
+              303,
+              443
+            ],
+            [
+              304,
+              425
+            ],
+            [
+              299,
+              408
+            ],
+            [
+              301,
+              388
+            ],
+            [
+              292,
+              369
+            ],
+            [
+              285,
+              353
+            ],
+            [
+              281,
+              338
+            ],
+            [
+              287,
+              334
+            ],
+            [
+              296,
+              352
+            ],
+            [
+              305,
+              370
+            ],
+            [
+              315,
+              390
+            ],
+            [
+              319,
+              404
+            ],
+            [
+              328,
+              413
+            ],
+            [
+              325,
+              425
+            ],
+            [
+              319,
+              444
+            ],
+            [
+              322,
+              473
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              274,
+              324
+            ],
+            [
+              267,
+              308
+            ],
+            [
+              257,
+              291
+            ],
+            [
+              249,
+              279
+            ],
+            [
+              254,
+              275
+            ],
+            [
+              264,
+              287
+            ],
+            [
+              276,
+              307
+            ],
+            [
+              282,
+              321
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_3",
+          "points": [
+            [
+              292,
+              340
+            ],
+            [
+              305,
+              326
+            ],
+            [
+              317,
+              312
+            ],
+            [
+              327,
+              298
+            ],
+            [
+              333,
+              296
+            ],
+            [
+              330,
+              306
+            ],
+            [
+              317,
+              322
+            ],
+            [
+              301,
+              343
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R06N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R06N02_Summer_RGB-13-15-26.png",
+      "rgb_sha256": "0c78f8902cec49cf518d4f7e227b8760db1c0c8df7ac8049be2af6248d742720",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Small target tree, oblique lower trunk and thin right-arm fragment; distant wood uncertain.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              255,
+              479
+            ],
+            [
+              259,
+              449
+            ],
+            [
+              255,
+              432
+            ],
+            [
+              249,
+              424
+            ],
+            [
+              251,
+              414
+            ],
+            [
+              264,
+              411
+            ],
+            [
+              278,
+              406
+            ],
+            [
+              285,
+              393
+            ],
+            [
+              296,
+              379
+            ],
+            [
+              300,
+              382
+            ],
+            [
+              293,
+              399
+            ],
+            [
+              284,
+              414
+            ],
+            [
+              280,
+              432
+            ],
+            [
+              274,
+              449
+            ],
+            [
+              272,
+              479
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              307,
+              367
+            ],
+            [
+              322,
+              352
+            ],
+            [
+              338,
+              331
+            ],
+            [
+              348,
+              313
+            ],
+            [
+              353,
+              315
+            ],
+            [
+              343,
+              336
+            ],
+            [
+              328,
+              357
+            ],
+            [
+              314,
+              372
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R07N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R07N02_Summer_RGB-13-20-57.png",
+      "rgb_sha256": "82d16b8b7f8daac6c7fd660f6d37b997e1149807ab87edabaf5b475a21126d66",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Very heavy fruit/leaf occlusion; tiny separated low-trunk/arm patches; topology not recoverable.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              284,
+              479
+            ],
+            [
+              282,
+              461
+            ],
+            [
+              281,
+              446
+            ],
+            [
+              283,
+              434
+            ],
+            [
+              289,
+              435
+            ],
+            [
+              291,
+              448
+            ],
+            [
+              292,
+              462
+            ],
+            [
+              294,
+              479
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              283,
+              417
+            ],
+            [
+              279,
+              406
+            ],
+            [
+              280,
+              397
+            ],
+            [
+              286,
+              393
+            ],
+            [
+              292,
+              393
+            ],
+            [
+              299,
+              398
+            ],
+            [
+              299,
+              405
+            ],
+            [
+              291,
+              407
+            ],
+            [
+              290,
+              418
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_3",
+          "points": [
+            [
+              207,
+              310
+            ],
+            [
+              200,
+              301
+            ],
+            [
+              194,
+              291
+            ],
+            [
+              198,
+              287
+            ],
+            [
+              205,
+              295
+            ],
+            [
+              214,
+              304
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R08N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R08N02_Summer_RGB-13-25-57.png",
+      "rgb_sha256": "5df38af068fbb842c749936c8c74531077dfa0e867576471fbcdc3a670c0e19e",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Upright trunk and separated right-arm fragments; left arm largely omitted as ambiguous.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              342,
+              477
+            ],
+            [
+              341,
+              455
+            ],
+            [
+              343,
+              435
+            ],
+            [
+              341,
+              414
+            ],
+            [
+              343,
+              396
+            ],
+            [
+              348,
+              389
+            ],
+            [
+              354,
+              390
+            ],
+            [
+              355,
+              412
+            ],
+            [
+              355,
+              435
+            ],
+            [
+              351,
+              454
+            ],
+            [
+              352,
+              477
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              349,
+              376
+            ],
+            [
+              349,
+              356
+            ],
+            [
+              355,
+              339
+            ],
+            [
+              361,
+              323
+            ],
+            [
+              366,
+              312
+            ],
+            [
+              370,
+              314
+            ],
+            [
+              365,
+              331
+            ],
+            [
+              361,
+              348
+            ],
+            [
+              358,
+              365
+            ],
+            [
+              358,
+              376
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_3",
+          "points": [
+            [
+              373,
+              280
+            ],
+            [
+              376,
+              260
+            ],
+            [
+              382,
+              239
+            ],
+            [
+              386,
+              224
+            ],
+            [
+              391,
+              225
+            ],
+            [
+              388,
+              242
+            ],
+            [
+              382,
+              264
+            ],
+            [
+              379,
+              281
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R09N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R09N02_Summer_RGB-13-31-5.png",
+      "rgb_sha256": "6db04f0ca7208a2d34bc3076fccec551a92dd421a16a4aed714b8910c3a5a954",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Lower fork and graft swelling; separated arm fragments; polygon corners may create spurs.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              375,
+              477
+            ],
+            [
+              370,
+              450
+            ],
+            [
+              368,
+              424
+            ],
+            [
+              361,
+              405
+            ],
+            [
+              355,
+              388
+            ],
+            [
+              356,
+              371
+            ],
+            [
+              364,
+              363
+            ],
+            [
+              372,
+              365
+            ],
+            [
+              375,
+              380
+            ],
+            [
+              387,
+              387
+            ],
+            [
+              394,
+              399
+            ],
+            [
+              390,
+              410
+            ],
+            [
+              383,
+              417
+            ],
+            [
+              384,
+              441
+            ],
+            [
+              390,
+              476
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              351,
+              357
+            ],
+            [
+              338,
+              348
+            ],
+            [
+              325,
+              339
+            ],
+            [
+              313,
+              324
+            ],
+            [
+              303,
+              313
+            ],
+            [
+              308,
+              310
+            ],
+            [
+              322,
+              324
+            ],
+            [
+              334,
+              335
+            ],
+            [
+              348,
+              343
+            ],
+            [
+              359,
+              350
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_3",
+          "points": [
+            [
+              374,
+              348
+            ],
+            [
+              378,
+              333
+            ],
+            [
+              383,
+              317
+            ],
+            [
+              384,
+              300
+            ],
+            [
+              390,
+              294
+            ],
+            [
+              393,
+              301
+            ],
+            [
+              390,
+              323
+            ],
+            [
+              385,
+              340
+            ],
+            [
+              380,
+              352
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R10N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R10N02_Summer_RGB-13-36-15.png",
+      "rgb_sha256": "9b945fbbb97059fad2113cb3fabbe6a62cbf0912cfeb7bee39c37b75fefebc6f",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Low trunk plus separate left/right wood ribbons; foliage prevents justified full Y connectivity.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              307,
+              477
+            ],
+            [
+              305,
+              456
+            ],
+            [
+              302,
+              439
+            ],
+            [
+              294,
+              429
+            ],
+            [
+              292,
+              421
+            ],
+            [
+              297,
+              409
+            ],
+            [
+              298,
+              390
+            ],
+            [
+              301,
+              379
+            ],
+            [
+              309,
+              380
+            ],
+            [
+              316,
+              398
+            ],
+            [
+              318,
+              411
+            ],
+            [
+              329,
+              421
+            ],
+            [
+              329,
+              430
+            ],
+            [
+              321,
+              441
+            ],
+            [
+              323,
+              456
+            ],
+            [
+              325,
+              477
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              311,
+              370
+            ],
+            [
+              317,
+              355
+            ],
+            [
+              324,
+              337
+            ],
+            [
+              330,
+              318
+            ],
+            [
+              337,
+              301
+            ],
+            [
+              341,
+              288
+            ],
+            [
+              347,
+              289
+            ],
+            [
+              343,
+              308
+            ],
+            [
+              336,
+              325
+            ],
+            [
+              332,
+              343
+            ],
+            [
+              325,
+              362
+            ],
+            [
+              320,
+              376
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_3",
+          "points": [
+            [
+              292,
+              362
+            ],
+            [
+              286,
+              348
+            ],
+            [
+              276,
+              333
+            ],
+            [
+              265,
+              315
+            ],
+            [
+              259,
+              299
+            ],
+            [
+              264,
+              297
+            ],
+            [
+              271,
+              311
+            ],
+            [
+              284,
+              329
+            ],
+            [
+              294,
+              346
+            ],
+            [
+              299,
+              359
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R11N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R11N02_Summer_RGB-13-41-8.png",
+      "rgb_sha256": "e21496cdde0385246465cd3839b76de4d9fef4f271e632dfdb55d63010b1113f",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Heavy occlusion; low trunk and horizontal right-arm patch only; incomplete main-arm coverage.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              294,
+              478
+            ],
+            [
+              290,
+              459
+            ],
+            [
+              290,
+              438
+            ],
+            [
+              287,
+              421
+            ],
+            [
+              287,
+              405
+            ],
+            [
+              293,
+              400
+            ],
+            [
+              299,
+              402
+            ],
+            [
+              301,
+              415
+            ],
+            [
+              309,
+              429
+            ],
+            [
+              311,
+              444
+            ],
+            [
+              306,
+              455
+            ],
+            [
+              307,
+              478
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              306,
+              393
+            ],
+            [
+              319,
+              386
+            ],
+            [
+              333,
+              379
+            ],
+            [
+              345,
+              370
+            ],
+            [
+              349,
+              369
+            ],
+            [
+              349,
+              377
+            ],
+            [
+              336,
+              388
+            ],
+            [
+              320,
+              395
+            ],
+            [
+              308,
+              400
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "sample_id": "R12N02",
+      "rgb_path": "data/raw/monash_y_tree/TreeID/Dataset (With Summer GT)/R12N02_Summer_RGB-13-45-33.png",
+      "rgb_sha256": "e8ea150a96405ef728384dbb14eb29b6c204be6bd67cb3bec51185bece74cf56",
+      "policy": "visible-main-wood-v1",
+      "image_size": [
+        640,
+        480
+      ],
+      "annotator": "Codex RGB visual draft",
+      "provenance": "ai_rgb_only_draft",
+      "review_status": "pending",
+      "reviewer": "",
+      "notes": "Low trunk and exposed right curve; uncertain left arm omitted; grass obscures trunk base.",
+      "polygons": [
+        {
+          "id": "visible_patch_1",
+          "points": [
+            [
+              319,
+              394
+            ],
+            [
+              320,
+              375
+            ],
+            [
+              318,
+              355
+            ],
+            [
+              321,
+              339
+            ],
+            [
+              328,
+              329
+            ],
+            [
+              337,
+              326
+            ],
+            [
+              345,
+              327
+            ],
+            [
+              350,
+              338
+            ],
+            [
+              348,
+              347
+            ],
+            [
+              339,
+              353
+            ],
+            [
+              335,
+              370
+            ],
+            [
+              331,
+              395
+            ]
+          ]
+        },
+        {
+          "id": "visible_patch_2",
+          "points": [
+            [
+              343,
+              320
+            ],
+            [
+              357,
+              307
+            ],
+            [
+              370,
+              299
+            ],
+            [
+              382,
+              289
+            ],
+            [
+              391,
+              279
+            ],
+            [
+              398,
+              264
+            ],
+            [
+              401,
+              250
+            ],
+            [
+              406,
+              249
+            ],
+            [
+              407,
+              262
+            ],
+            [
+              402,
+              280
+            ],
+            [
+              389,
+              297
+            ],
+            [
+              375,
+              308
+            ],
+            [
+              360,
+              318
+            ],
+            [
+              350,
+              328
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

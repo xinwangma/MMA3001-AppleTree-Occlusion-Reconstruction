@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module apple_tree_project.baseline</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="apple_tree_project.html" class="white">apple_tree_project</a>.baseline</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="../../src/apple_tree_project/baseline.py">../../src/apple_tree_project/baseline.py</a></td></tr></table>
+    <p><span class="code">Visible-mask-only&nbsp;2D&nbsp;baseline;&nbsp;no&nbsp;hidden&nbsp;completion,&nbsp;RGB&nbsp;segmentation&nbsp;or&nbsp;3D.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="math.html">math</a><br>
+</td><td class="multicolumn"><a href="numpy.html">numpy</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-binary_visible"><strong>binary_visible</strong></a>(mask)</dt><dd><span class="code">Copy&nbsp;an&nbsp;explicit&nbsp;binary&nbsp;mask&nbsp;(bool,&nbsp;0/1&nbsp;or&nbsp;0/255);&nbsp;reject&nbsp;soft&nbsp;labels.</span></dd></dl>
+ <dl><dt><a name="-pixel_graph"><strong>pixel_graph</strong></a>(skeleton)</dt><dd><span class="code">Build&nbsp;deterministic&nbsp;undirected&nbsp;pixel&nbsp;graph,&nbsp;coordinates&nbsp;x=column,y=row.<br>
+&nbsp;<br>
+Eight-neighbour&nbsp;adjacency&nbsp;with&nbsp;diagonal&nbsp;shortcuts&nbsp;suppressed&nbsp;whenever&nbsp;either<br>
+orthogonal&nbsp;intermediary&nbsp;exists.&nbsp;Nodes&nbsp;represent&nbsp;pixels,&nbsp;not&nbsp;fitted&nbsp;anatomical<br>
+joints.&nbsp;Lengths&nbsp;are&nbsp;pixel&nbsp;units.&nbsp;Disconnected&nbsp;pieces&nbsp;and&nbsp;cycles&nbsp;are&nbsp;retained.</span></dd></dl>
+ <dl><dt><a name="-thin_visible"><strong>thin_visible</strong></a>(mask)</dt><dd><span class="code">Zhang-Suen&nbsp;two-subiteration&nbsp;thinning&nbsp;to&nbsp;convergence,&nbsp;zero&nbsp;outside&nbsp;frame.<br>
+&nbsp;<br>
+Simultaneous&nbsp;deletion&nbsp;within&nbsp;each&nbsp;pass.&nbsp;Output&nbsp;is&nbsp;always&nbsp;a&nbsp;subset&nbsp;of&nbsp;input;<br>
+no&nbsp;closing,&nbsp;gap&nbsp;bridging,&nbsp;pruning&nbsp;or&nbsp;largest-component&nbsp;selection&nbsp;is&nbsp;applied.</span></dd></dl>
+ <dl><dt><a name="-visible_only_baseline"><strong>visible_only_baseline</strong></a>(visible_mask)</dt><dd><span class="code">Return&nbsp;unchanged&nbsp;prediction&nbsp;mask,&nbsp;subset&nbsp;skeleton&nbsp;and&nbsp;pixel&nbsp;graph.<br>
+&nbsp;<br>
+Only&nbsp;visible_mask&nbsp;is&nbsp;accepted.&nbsp;Whole/amodal&nbsp;labels&nbsp;and&nbsp;depth&nbsp;are&nbsp;deliberately<br>
+absent&nbsp;from&nbsp;this&nbsp;inference&nbsp;API.&nbsp;Output&nbsp;quality&nbsp;depends&nbsp;on&nbsp;the&nbsp;supplied&nbsp;mask;<br>
+an&nbsp;'inferred=False'&nbsp;flag&nbsp;means&nbsp;no&nbsp;added&nbsp;geometry,&nbsp;not&nbsp;verified&nbsp;physical&nbsp;truth.</span></dd></dl>
+</td></tr></table>
+</body></html>

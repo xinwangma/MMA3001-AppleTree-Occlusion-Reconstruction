@@ -48,3 +48,20 @@ on a normal network-enabled Windows Python environment before final submission.
 - Baseline and completion-algorithm geometric unit tests.
 - Held-out real-dataset metrics (must be reported separately).
 - Runtime and sensitivity analysis.
+
+## Step 3 update — 23 October 2026
+
+Complete suite: **36 passed** (22 existing plus 14 new baseline cases). Command: set PYTHONPATH to results/test_dependencies and src, then run `python -m pytest -q`. Coverage includes skeleton topology on synthetic fixtures, gap preservation, graph geometry, invalid inputs and runner output/source protection. The existing synthetic demo ran successfully; no real-tree accuracy or precise GT alignment is established. Details: [Step 3 baseline](11_visible_only_baseline.md).
+
+Follow-up: git diff --check passes and all 36 pytest tests still pass. Additional executed real-input checks verified 20 native RGB schemas/copies against Step 2 hashes, 21 unchanged source files, rejection of mismatched real Summer GT, and refusal to overwrite review work. No real reconstruction accuracy is established.
+
+## Step 3 real-RGB diagnostic update ? 23 October 2026
+
+Complete suite: **50 passed** (36 previous plus 14 annotation/validation cases).
+Command: PYTHONPATH includes results/test_dependencies and src; python -m pytest -q.
+Added geometry, provenance, source-hash binding, deliberately lost connectivity,
+pending-draft gates, source-preservation and output-protection tests. Real RGB
+runs used 12 AI-authored draft masks, not human truth. Component correspondence
+and pixel-subset checks passed; this establishes no real anatomical accuracy.
+See [real-RGB findings](12_step3_real_data_review.md). GUI interaction awaits a
+human check; CLI help and GUI-independent backend were exercised.

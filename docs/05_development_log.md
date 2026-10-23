@@ -22,3 +22,21 @@
 - Confirmed foundation unit tests on this snapshot: `PYTHONPATH=src python -m pytest -q`
   returned `14 passed`. This verifies scaffolding utilities only; it does not validate
   real-dataset branch completion or 3D reconstruction.
+
+## 2026-10-23 — Step 3: visible-only 2D prototype
+
+Implemented binary-visible-mask thinning and a deterministic pixel graph in the existing src layout, plus a provenance-recording CLI. Reused the synthetic fixture without rewriting it: 117 skeleton pixels, 2 components; occlusion gap preserved. Full suite: 36 passed. Added docs/11_visible_only_baseline.md and usage/status updates. No real visible masks were fabricated; Step 2 alignment and depth calibration remain unresolved. No commit or push.
+
+Real-data readiness follow-up: reused Step 2 selection to prepare 20 native-RGB annotation/review inputs, verified source/copy hashes and unchanged metadata, exercised real GT dimension rejection and existing-package protection. No real visible labels available; all acceptance flags remain no. No algorithm changes; 36 tests pass; no commit/push.
+
+## 2026-10-23 ? Step 3 real-RGB draft diagnostics
+
+Audited the mask-assisted baseline (it cannot segment RGB). Selected 12 N02 RGBs
+across R01..R12. Added native polygon editor, provenance/hash-checked rasteriser,
+and batch figures/connectivity/runtime diagnostics. Saved 30 RGB-only AI draft
+patches, explicitly pending human review, with no whole-GT-derived masks. All 12
+input component correspondences were preserved and all 30 patches retained
+skeleton pixels. Median sample-median inference 196.8 ms; broad graft draft
+R06N02 produced a spur. 50 tests passed. No real accuracy or human acceptance is
+claimed. Details: docs/12_step3_real_data_review.md. Baseline algorithms unchanged;
+no Step 4, commit or push.
