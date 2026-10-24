@@ -10,6 +10,7 @@ requires-python = ">=3.10"
 dependencies = ["numpy>=1.24,<3", "Pillow>=10,<13"]
 
 [project.optional-dependencies]
+study = ["matplotlib>=3.7,<4"]
 dev = ["pytest>=7,<10", "pdoc>=14,<16"]
 
 [tool.setuptools.packages.find]

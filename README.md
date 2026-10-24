@@ -2,10 +2,10 @@
 
 **MMA3001 | Numerical Methods and Machine Learning**  
 **Project type:** Individual engineering computing project  
-**Development status:** Step 3 - mask-assisted visible-only 2D prototype; real-data evaluation pending
+**Development status:** Step 4 - conservative 2D gap completion and synthetic evaluation; real-data validation pending
 **Version:** 0.1.0
 
-> **Important:** This is a preliminary, reproducible software foundation. The occluded-branch completion and 3D reconstruction algorithms have **not yet been implemented or validated on the real Monash dataset**. Included images are synthetic input-format fixtures, not genuine apple-tree experimental observations.
+> **Important:** Linear and quadratic 2D gap completion are implemented and tested on synthetic Y trees. The 12 real RGB draft examples are qualitative hypotheses only, not verified ground truth or evidence of real-data accuracy. Metric 3D reconstruction remains unimplemented. See [Step 4 report](docs/14_step4_branch_completion.md) and the [results gallery](results/step4_occlusion_completion/index.html).
 
 ## 1. Project overview
 
