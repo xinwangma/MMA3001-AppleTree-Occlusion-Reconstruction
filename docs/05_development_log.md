@@ -51,3 +51,18 @@ human review and approval records; heuristic QA and before/after outputs. Reject
 preflight polygons that crossed leaves/fruit/vegetation and corrected polygon-join
 artifacts. 63 tests pass. All 12 final annotations remain AI DRAFT; no real accuracy
 claim, source changes, occlusion completion, commit or push. See docs/13_step3_annotation_revision.md.
+
+
+## 2026-10-25 — Step 6 paired final validation and profiling
+
+Reused and checked Step 4/5 numerical evidence. Added 48 frozen-seed synthetic holdout configurations, 30 targeted 3D gap/physical-curvature cases, 8 negative fixtures per completion method, and 192/640-width stage/runtime/memory benchmarks. Shared thinning and detection only across the three-method comparison; original methods retained. Real 12 drafts remain pending, with R06/R08/R09/R10 flagged for independent human review. Full-suite totals: {"tests": 139, "failures": 0, "errors": 0, "skipped": 0, "passed": 139}. See docs/16_step6_final_validation.md and results/step6_final_validation/. No raw/previous-results changes, Step 7, commit or push.
+
+
+Step 6 recovery final verification: {"tests": 140, "failures": 0, "errors": 0, "skipped": 0, "passed": 140}. Source snapshot suite also passed; saved Step 6 replay 234 graphs and Step 5 replay 15 graphs passed. Preserved initial analysis/test/package attempts. Windows ZIP readback fix only; no experiment/runtime repetition or Step 3–5 algorithm change.
+
+Step 6 runtime interpretation audit: original timing inputs had zero candidates; preserved all timing records, added one successful-gap microbenchmark with accepted-count assertions. Full suite/source snapshot: {"tests": 141, "failures": 0, "errors": 0, "skipped": 0, "passed": 141}. No prior experiment/runtime reruns or Step 3–5 changes.
+
+
+## Step 6 v2 angular boundary stability
+
+Fixed conservative numerical boundary policy; frozen inputs/plan preserved. Audited 234 graphs against archived v1 source and current policy, regenerated affected outputs in a new version, checked +/-1e-12 degree decision perturbations and holdout_19. Full suite: {"tests": 160, "failures": 0, "errors": 0, "skipped": 0, "passed": 160}. Original data/results/ZIP unchanged. See docs/16_step6_numerical_stability.md. No commit/push or Step7.

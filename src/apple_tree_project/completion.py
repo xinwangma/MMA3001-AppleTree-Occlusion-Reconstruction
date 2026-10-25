@@ -12,6 +12,30 @@ from .baseline import binary_visible, pixel_graph
 
 ROLES = {'trunk', 'left_primary', 'right_primary'}
 
+# Conservative float64 decision band, fixed independently of evaluation scores.
+# A 32*eps dot-product perturbation near +/-1 gives acos uncertainty about
+# sqrt(64*eps) radians = 6.83e-6 degrees; round UP to a fixed 1e-5 degree band.
+# This is an engineering roundoff guard, not a bound on arbitrary ill-conditioned
+# least-squares input, a sensor tolerance, or a change to the physical threshold.
+ANGLE_BOUNDARY_GUARD_DEG = 1e-5
+ANGLE_BOUNDARY_POLICY = 'strict_below_angular_guard_v1'
+
+
+def _angular_threshold_state(value_deg, threshold_deg):
+    """Classify a finite angle as below/ambiguous/above a threshold.
+
+    Eligibility requires strictly below T-guard. Equality and every value in
+    [T-guard,T+guard] are ambiguous and conservatively rejected. No rounding
+    to decimal places or score-dependent tolerance is used.
+    """
+    if not math.isfinite(value_deg) or not math.isfinite(threshold_deg):
+        raise ValueError('Finite angles and thresholds required')
+    if value_deg < threshold_deg-ANGLE_BOUNDARY_GUARD_DEG:
+        return 'below'
+    if value_deg > threshold_deg+ANGLE_BOUNDARY_GUARD_DEG:
+        return 'above'
+    return 'ambiguous'
+
 
 def detect_candidate_gaps(skeleton, *, max_gap_px=80., max_angle_deg=65.,
                           max_curvature_deg=45., support_points=8,
@@ -22,6 +46,8 @@ def detect_candidate_gaps(skeleton, *, max_gap_px=80., max_angle_deg=65.,
     identities. Otherwise image-upright Y geometry assigns provisional roles
     around a lower-trunk axis. These are screening labels, not anatomical truth.
     Returned candidates still require an occlusion region for complete_gaps.
+    Angular gates use strict_below_angular_guard_v1: a fixed 1e-5 degree band
+    around each threshold is rejected, including exact mathematical equality.
     """
     s = binary_visible(skeleton)
     if (not np.isfinite(max_gap_px) or max_gap_px <= 1 or
@@ -80,10 +106,20 @@ def detect_candidate_gaps(skeleton, *, max_gap_px=80., max_angle_deg=65.,
                 record['branch'] = r1
                 if r1 not in ROLES or r1 != r2:
                     reason = 'incompatible_or_unknown_main_branch_identity'
-                elif max(angles) > max_angle_deg:
-                    reason = 'direction_inconsistent'
-                elif max(turns) > max_curvature_deg:
-                    reason = 'local_curvature_unstable'
+                elif _angular_threshold_state(max(angles), max_angle_deg) != 'below':
+                    state = _angular_threshold_state(max(angles), max_angle_deg)
+                    reason = 'direction_threshold_numerically_ambiguous' if state == 'ambiguous' else 'direction_inconsistent'
+                    if state == 'ambiguous':
+                        record.update(boundary_quantity='direction',boundary_value_deg=max(angles),
+                                      boundary_threshold_deg=max_angle_deg,boundary_guard_deg=ANGLE_BOUNDARY_GUARD_DEG,
+                                      boundary_policy=ANGLE_BOUNDARY_POLICY)
+                elif _angular_threshold_state(max(turns), max_curvature_deg) != 'below':
+                    state = _angular_threshold_state(max(turns), max_curvature_deg)
+                    reason = 'local_curvature_threshold_numerically_ambiguous' if state == 'ambiguous' else 'local_curvature_unstable'
+                    if state == 'ambiguous':
+                        record.update(boundary_quantity='local_curvature',boundary_value_deg=max(turns),
+                                      boundary_threshold_deg=max_curvature_deg,boundary_guard_deg=ANGLE_BOUNDARY_GUARD_DEG,
+                                      boundary_policy=ANGLE_BOUNDARY_POLICY)
                 elif r1 == 'trunk' and abs(direction[1]) < .7:
                     reason = 'trunk_gap_not_vertical_in_upright_Y_model'
                 elif r1 != 'trunk' and abs(direction[0]) < .2:

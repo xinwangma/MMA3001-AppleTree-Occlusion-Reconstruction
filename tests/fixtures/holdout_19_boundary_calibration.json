@@ -1,0 +1,17 @@
+{
+  "width": 192,
+  "height": 192,
+  "fx": 140.0,
+  "fy": 140.0,
+  "cx": 96.0,
+  "cy": 96.0,
+  "depth_unit_to_m": 1.0,
+  "depth_kind": "axial_z",
+  "invalid_values": [
+    0.0
+  ],
+  "registered_to_skeleton": true,
+  "rectified": true,
+  "evidence": "CALIBRATED SYNTHETIC Step 6 simulator",
+  "depth_offset_m": 0.0
+}

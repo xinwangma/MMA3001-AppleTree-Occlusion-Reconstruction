@@ -2,7 +2,7 @@
 
 **MMA3001 | Numerical Methods and Machine Learning**  
 **Project type:** Individual engineering computing project  
-**Development status:** Step 5 - calibrated synthetic 3D lifting implemented; real metric 3D unsupported pending calibration
+**Development status:** Step 6 - paired synthetic validation and stage profiling; real metric 3D remains unsupported
 **Version:** 0.1.0
 
 > **Important:** Linear and quadratic 2D gap completion are implemented and tested on synthetic Y trees. The 12 real RGB draft examples are qualitative hypotheses only, not verified ground truth or evidence of real-data accuracy. Calibrated 3D lifting is validated on synthetic trees; real metric 3D remains unsupported because depth decoding, calibration and registration are unverified. See [Step 5 report](docs/15_step5_3d_reconstruction.md) and [3D gallery](results/step5_3d_reconstruction/index.html). See [Step 4 report](docs/14_step4_branch_completion.md) and the [results gallery](results/step4_occlusion_completion/index.html).
@@ -150,9 +150,9 @@ Open the HTML file(s) inside `docs/api/`. API documentation describes the implem
 | Automated tests and initial test report | Implemented |
 | Real dataset decoding and calibration | Inventory complete; alignment provisional; depth calibration unresolved |
 | Visible-only baseline reconstruction | Implemented: mask-assisted 2D skeleton/pixel graph; synthetic demonstration only |
-| Occluded-branch completion | Planned |
-| Full 3D skeleton reconstruction | Planned |
-| Held-out quantitative model evaluation | Planned |
+| Occluded-branch completion | Implemented: linear and quadratic; synthetic validation, real drafts only |
+| Full 3D skeleton reconstruction | Calibrated synthetic lifting implemented; real metric 3D unsupported |
+| Held-out quantitative model evaluation | Step 6 independent synthetic configurations; human-validated real accuracy remains pending |
 
 See the dated [`development log`](docs/05_development_log.md) and [`test report`](docs/07_test_report.md). Test counts are specific to the code version and must be re-run after changes.
 
@@ -203,3 +203,13 @@ zoom/pan, vertex editing, visible/occluded checkpoints, separate review/approval
 graph warnings and final v4 before/after figures. Ten samples received conservative
 visible-wood revisions; two were retained because of ambiguity. All remain DRAFT.
 Open `results/step3_real_validation/coverage_revision_v4/run/index.html` locally.
+
+
+### Step 6 final validation
+
+Paired comparison of visible-only, linear and quadratic methods reuses Step 4/5 evidence and adds 48 independent synthetic configurations, 30 targeted diagnostics, negative cases, stage timings and a shared-preprocessing comparison workflow. All real annotations remain AI DRAFT. No real metric 3D accuracy is claimed. See [Step 6 report](docs/16_step6_final_validation.md), [HTML gallery](results/step6_final_validation/index.html) and [Step 5 calibration findings](docs/step5_calibration_followup.md). Run `python scripts/evaluate_step6.py --output results/step6_new_run` from the repository root using a new directory.
+
+
+### Step 6 v2 numerical boundary policy
+
+Use [the current numerical stability report](docs/16_step6_numerical_stability.md) and [v2 gallery](results/step6_final_validation_v2_boundary_policy/index.html). Earlier Step 6 tables/ZIP are preserved v1 history. Angular comparisons reject the fixed ±0.00001 degree ambiguity band. No threshold retuning or real metric 3D claims.
