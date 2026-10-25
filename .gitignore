@@ -10,3 +10,6 @@ data/raw/
 data/processed/
 data/manifest.csv
 .DS_Store
+
+# Local distribution archives; use reviewed Git contents for submission.
+*.zip

@@ -1,0 +1,57 @@
+{
+  "generator": "Python standard-library pydoc",
+  "hash_policy": "Text bytes with CRLF normalised to LF",
+  "modules": {
+    "apple_tree_project": {
+      "source": "src/apple_tree_project/__init__.py",
+      "source_sha256": "6c4905ef47396faebf01a8cac66ea620fd3356f9ad630723ff278b6ff4cde6c2",
+      "html_sha256": "652cdcec47e8fec64df6750b5a1977b3672af05eef49ab61eacd41ceb8ad0d56"
+    },
+    "apple_tree_project.alignment": {
+      "source": "src/apple_tree_project/alignment.py",
+      "source_sha256": "43e77c04cf551675995fb788e5409100d347124776bb7d4c9bab506308897b52",
+      "html_sha256": "31d6f4e64b0b90697448f4d0dad0e82c9072bf549dd08b544035d2077a076e01"
+    },
+    "apple_tree_project.audit": {
+      "source": "src/apple_tree_project/audit.py",
+      "source_sha256": "7b7948468ee9e84f9c4f311afbcb25e08b50cf1e685c63057a380f2301b807da",
+      "html_sha256": "33505cd4eb6c0c81049d67135177434dad054e76c95844d3164de64c2e988901"
+    },
+    "apple_tree_project.baseline": {
+      "source": "src/apple_tree_project/baseline.py",
+      "source_sha256": "960a680998e7df306837844a2735986ce920887d3fdace15281118b7a3716665",
+      "html_sha256": "af4dfc65f48b43d2869269ed2b742c9a52fd1407a3c0a926a496d2725b004ca7"
+    },
+    "apple_tree_project.completion": {
+      "source": "src/apple_tree_project/completion.py",
+      "source_sha256": "352614ca0200a77dc23ce3fcd15a33e5eba63a25f5a1b4bf124d93b43433b2ac",
+      "html_sha256": "9aa348546c588d594b61f5d5ca00249911ebdb2371c459f0b3dc1b4ed34a8c25"
+    },
+    "apple_tree_project.manifest": {
+      "source": "src/apple_tree_project/manifest.py",
+      "source_sha256": "fdb00b29b755661817e1bbbba467d8248c31f945a4ca59bfc7a53c0a718b26da",
+      "html_sha256": "e2ecc5cbba22180ad9755c2a366711a6c0726307e2e631c70b70dd230a41f1a9"
+    },
+    "apple_tree_project.matching": {
+      "source": "src/apple_tree_project/matching.py",
+      "source_sha256": "ab210500d0219786b150fd3fcab8ae12d007e8e3b3c15fec83562e2c9eb2b1c0",
+      "html_sha256": "ac4018f7836e11c7f0a76c16511fb9363480dd6e50b24ab739e082b1a602fce2"
+    },
+    "apple_tree_project.metrics": {
+      "source": "src/apple_tree_project/metrics.py",
+      "source_sha256": "178b1b3a365b7d7a151945b6652bbd0a418eba26d2036cc5b955aa77fab77e10",
+      "html_sha256": "24b7696c94d749cf3274f5530283c7cfeeba891ee13e534aca7eafe349fdef68"
+    },
+    "apple_tree_project.reconstruction3d": {
+      "source": "src/apple_tree_project/reconstruction3d.py",
+      "source_sha256": "653e9c1604e21083d47cababb25bd980924b9ac43a51f749e84210dc8103ba47",
+      "html_sha256": "e35a8c88b29f89c8b62c1297c04c6070992e1f53f108c4c9d7fd08bfd373d30f"
+    },
+    "apple_tree_project.visible_annotation": {
+      "source": "src/apple_tree_project/visible_annotation.py",
+      "source_sha256": "3554d7c636ee76fbbe015f33cbfa39a0c5ee126f368c191b4ad3dec2d79abbc2",
+      "html_sha256": "af0c47ccdfcc8ef32453244f3260a3f4562a548362e99ac47fa33e9430c8d8dd"
+    }
+  },
+  "index_sha256": "91dfb933ac2ccf4368188f9d28d3c6b18eb4e2ae324efa1ad6e0acea6528831d"
+}

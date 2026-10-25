@@ -1,0 +1,79 @@
+{
+  "verified_utc": "2026-10-25T13:01:02.003525+00:00",
+  "reference_commit": "a7211681d62a36c55320b091176fdb4fd6ae7e31",
+  "published_clone": {
+    "head": "a7211681d62a36c55320b091176fdb4fd6ae7e31",
+    "tests": {
+      "tests": 171,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_exit_code": 1,
+    "missing_generated_or_historical_inputs": [
+      "results/step6_final_validation_v2_boundary_policy/decisions.json",
+      "results/step6_final_validation_v2_boundary_policy/all_case_metrics.json",
+      "results/step6_final_validation_v2_boundary_policy/synthetic/holdout_39/inputs_and_reference.npz",
+      "results/step3_real_validation/coverage_revision_v4/run",
+      "results/step61_fork_matching/frozen_plan.json",
+      "docs/api/apple_tree_project.completion.html",
+      "docs/api/apple_tree_project.matching.html",
+      "docs/api/apple_tree_project.reconstruction3d.html"
+    ],
+    "missing_matplotlib_confirmed": true
+  },
+  "workspace_tests": {
+    "tests": 171,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "repaired_clone_tests": {
+    "tests": 171,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "repaired_clone_is_local_overlay_not_published": true,
+  "pip_check_passed": true,
+  "matplotlib_dependency_present": true,
+  "api_modules": 10,
+  "api_source_hashes_pages_and_local_links_passed": true,
+  "english_comments_docstrings_check_passed": true,
+  "step7_source_files_removed": 61,
+  "step7_bytecode_files_removed": 59,
+  "required_algorithms_and_tests_byte_unchanged": true,
+  "academic_documents_and_archives_preserved": true,
+  "preservation": {
+    "files_checked": 11467,
+    "sha256_size_mtime_unchanged": true
+  },
+  "synthetic_replay": {
+    "metric_rows_recomputed": 600,
+    "numeric_values_checked": 4988,
+    "maximum_metric_absolute_difference": 0.0,
+    "metrics_from_saved_graphs": true,
+    "reference_arrays_used_only_for_metric_evaluation": true,
+    "timing_records_preserved_not_rerun": true,
+    "source_hashes_match_frozen_plan": true,
+    "source_hash_policy": "Frozen original bytes or CRLF/LF conversion only",
+    "saved_observation_replay": {
+      "graphs_checked": 480,
+      "reference_arrays_read": false,
+      "simulator_called": false,
+      "exact_topology_identity_status": true,
+      "atol": 1e-12,
+      "rtol": 1e-10
+    }
+  },
+  "synthetic_archive": {
+    "path": "D:\\Users\\HENRY\\Desktop\\mma3001_PROJECT\\MMA3001-AppleTree-Occlusion-Reconstruction\\data\\raw\\monash_y_tree\\completed_project_repair\\MMA3001_Step61_Synthetic_Replay.zip",
+    "bytes": 19372296,
+    "sha256": "e51fe9698d8e4bb643a3eeca77baa70f3a216908630ae5b459e4f1373db050b1",
+    "monash_rgbd_included": false
+  },
+  "actual_new_remote_actions_run": false,
+  "commit_or_push": false,
+  "git_diff_check_passed": true,
+  "current_markdown_and_selected_figure_links_passed": true
+}

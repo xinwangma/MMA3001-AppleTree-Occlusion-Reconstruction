@@ -1,220 +1,212 @@
-# Occlusion-Aware 3D Apple Tree Skeleton Reconstruction
+# Occlusion-Aware Apple Tree Skeleton Reconstruction
 
-**MMA3001 | Numerical Methods and Machine Learning**  
-**Project type:** Individual engineering computing project  
-**Development status:** Step 6 - paired synthetic validation and stage profiling; real metric 3D remains unsupported
-**Version:** 0.1.0
+MMA3001 — Numerical Methods and Machine Learning, 2026 individual project.
+Version 0.1.0. Steps 1?6.1 are complete within the validation limits below.
+Algorithms, numerical settings and historical experiments are frozen.
 
-> **Important:** Linear and quadratic 2D gap completion are implemented and tested on synthetic Y trees. The 12 real RGB draft examples are qualitative hypotheses only, not verified ground truth or evidence of real-data accuracy. Calibrated 3D lifting is validated on synthetic trees; real metric 3D remains unsupported because depth decoding, calibration and registration are unverified. See [Step 5 report](docs/15_step5_3d_reconstruction.md) and [3D gallery](results/step5_3d_reconstruction/index.html). See [Step 4 report](docs/14_step4_branch_completion.md) and the [results gallery](results/step4_occlusion_completion/index.html).
+## Purpose and validation boundary
 
-## 1. Project overview
+Estimate the trunk and two primary branches of an upright Y-shaped apple tree
+when observations contain gaps. This is a **mask-assisted research prototype**:
+it takes an explicit visible-branch mask; it does not segment branches from RGB.
+RGB supports annotation and visual review. Whole-branch labels are evaluation
+references and are never inference inputs.
 
-Agricultural robots need information about tree trunks and branches for tasks such as orchard inspection, navigation and pruning. However, leaves and other objects can hide parts of a branch. A camera provides colour information, and a depth sensor provides distances to visible surfaces; neither directly observes the geometry hidden behind an obstruction.
+Visible-only skeletonisation, Linear/Quadratic gap completion, fork-anchored
+matching and calibrated synthetic 3D lifting are implemented. Hidden geometry is
+labelled as inferred; unsupported physical coordinates remain null. The real
+RGB-D depth encoding, calibration and registration are unverified. The 12 real
+annotations remain AI DRAFT. **No real-world reconstruction accuracy is claimed.**
+This prototype is not validated for pruning or robot control.
 
-This project investigates whether an **occlusion-aware geometric branch-completion method** can estimate the missing main branches of Y-shaped apple trees more reliably than a **visible-only baseline**. A simplified three-dimensional (3D) skeleton is the intended engineering output, with inferred segments explicitly distinguished from measured segments.
+## Methods and final default
 
-### Research question
+1. `baseline.py`: binary-mask validation, Zhang–Suen thinning and pixel graph.
+2. `completion.py`: candidate screening and Linear/Quadratic completion with
+   explicit occlusion support and topology checks.
+3. `matching.py`: optional matching anchored at a single visible upright Y fork.
+4. `reconstruction3d.py`: explicit-camera backprojection; optional hidden-Z
+   interpolation between supported anchors. Surface depth is a proxy, not axis GT.
 
-> Can an occlusion-aware geometric branch-completion algorithm improve the completeness of Y-shaped apple-tree skeletons compared with visible-only reconstruction, while maintaining reasonable geometric consistency and computational efficiency?
+Retain **original Linear** as the default completion method. Keep visible-only,
+Quadratic and both anchored variants for comparison. Frozen Step 6.1 evaluation:
 
-### Project objectives
+| Method | Cases accepting completion / 96 | Correct connections | Incorrect connections |
+| --- | ---: | ---: | ---: |
+| Visible-only | 0 | 0 | 0 |
+| Linear | 3 | 3 | 0 |
+| Quadratic | 4 | 3 | 1 |
+| Anchored Linear | 3 | 3 | 0 |
+| Anchored Quadratic | 3 | 3 | 0 |
 
-1. Inspect and validate paired RGB images, depth maps and branch annotations.
-2. Implement a visible-only baseline for the trunk and two primary branches.
-3. Develop a geometric algorithm to estimate partially occluded main branches.
-4. Use calibrated depth observations, when available, to recover observed 3D points; label hidden 3D segments as inferred estimates.
-5. Evaluate the baseline and proposed method on held-out annotations using transparent metrics, runtime analysis and sensitivity tests.
-6. Document assumptions, limitations, reproducibility and the use of AI tools.
+The anchored variants reject all 12 real drafts. They have not demonstrated a
+reason to replace the simpler current default. These results do not establish
+universal safety or superiority. The 24 development and 96 frozen evaluation
+cases use different seeds/configurations from the **same simulator**, not
+independent real trees. See the [full Step 6.1 report](docs/17_step61_fork_matching.md)
+and [small frozen evidence snapshot](docs/validation/step61_summary.json).
+Default selection is post-evaluation interpretation, not an additional test set.
 
-## 2. Dataset and provenance
-
-**Candidate dataset:** Monash University — [Y-shaped Tree Dataset for Tree Branch Prediction](https://www.monash.edu/engineering/lmga/news/y-shaped-tree-dataset-for-tree-branch-prediction).
-
-The published dataset description reports **435 RGB-D images** across summer, autumn and winter, with *position*, *visible-branch* and *whole-branch* annotations. The local file structure and pixel encodings have been inventoried. Precise annotation alignment, depth scale and camera calibration remain unresolved; no 3D ground truth was found. See docs/09_real_dataset_inspection.md and docs/10_annotation_alignment.md.
-
-The original dataset is **not redistributed** in this repository; check its applicable terms before storing or sharing data. See [`docs/04_data_integration.md`](docs/04_data_integration.md).
-
-## 3. Inputs and outputs
-
-| Component | Intended format | Role |
-| --- | --- | --- |
-| RGB image | `height x width x 3` image | Colour observation |
-| Depth image | `height x width` array/image | Depth of visible surfaces; physical scale must be verified |
-| Visible-branch annotation | Binary mask or converted annotation | Baseline input / evaluation reference |
-| Camera calibration | Intrinsics and depth unit conversion, if available | Project visible observations into metric 3D |
-| Whole-branch annotation | Binary mask or converted annotation | Training/validation label; **not an inference-time input** |
-| Season and tree ID | Sample metadata | Robustness study and leakage-aware data split |
-| Completed branch mask | Binary image | Predicted visible and inferred branch pixels |
-| Skeleton graph | Nodes and edges | Main trunk and branch connectivity |
-| 3D skeleton | Coordinates plus observed/inferred flags | Simplified spatial tree structure, subject to calibration |
-| Evaluation report | CSV / JSON / figures | Accuracy, robustness and runtime evidence |
-
-**Scope:** The intended reconstruction focuses on the trunk and two major branches of Y-shaped trees. Full canopy reconstruction, fine twigs, and robot control are out of scope.
-
-## 4. Proposed computational approach
-
-### Method A — Visible-only baseline
-
-Extract centreline structure from the available visible branches. This method provides a simple comparison and, by definition, does not recover fully occluded branch sections.
-
-### Method B — Occlusion-aware geometric completion
-
-Locate the Y-junction and visible branch fragments; estimate a plausible continuation through gaps using fitted curves and geometric constraints; then represent the visible and inferred segments in a connected skeleton graph. Candidate techniques include least-squares curve fitting and constrained interpolation. Final details and parameter values will be selected after inspecting real annotations.
-
-### Depth-assisted 3D reconstruction
-
-When the depth representation, camera registration and intrinsics are verified, valid visible pixels may be back-projected into camera coordinates. Fully hidden segments have no directly observed depth and therefore require explicit geometric assumptions. **A plausible 3D rendering is not itself proof of 3D accuracy.**
-
-## 5. Validation plan
-
-For a completed-branch prediction mask `P` and whole-branch ground truth `W`:
-
-- **Precision:** `TP / (TP + FP)`
-- **Recall:** `TP / (TP + FN)`
-- **F1 score:** `2TP / (2TP + FP + FN)`
-- **Intersection over Union (IoU):** `TP / (TP + FP + FN)`
-- **Hidden-branch recall:** fraction of reference pixels in `W AND NOT V` recovered by `P`, where `V` is the visible-branch label.
-
-Compare both approaches on appropriately held-out data and measure runtime. Study sensitivity to missing branch length, noise, fitting settings and, where supported, seasons. Group repeated observations of the same tree together when constructing data splits to avoid leakage.
-
-**Validation boundary:** Whole-branch labels support 2D branch-completion evaluation. Do **not** claim quantitative 3D reconstruction accuracy without reliable 3D ground truth or an independently justified metric benchmark.
-
-Full details: [`docs/02_validation_protocol.md`](docs/02_validation_protocol.md).
-
-## 6. Repository structure
+## Repository map
 
 ```text
-.
-├── .github/workflows/tests.yml  # Automated tests on GitHub
-├── data/                       # README and synthetic demonstration fixture
-├── docs/                       # Project definition, validation, logs, test report
-│   └── api/                    # Generated HTML source documentation
-├── results/                    # Generated output (ignored by Git)
-├── scripts/                    # Fixture generator and docs generator
-├── src/apple_tree_project/
-│   ├── manifest.py             # Paired input paths and sample metadata
-│   ├── audit.py                # RGB-D / annotation consistency checks
-│   └── metrics.py              # Precision, recall, F1, IoU and hidden recall
-├── tests/                      # Automated verification of foundation code
-├── .gitignore
-├── LICENSE
-├── pyproject.toml
-└── README.md
+src/apple_tree_project/  manifest, audit, alignment, visible_annotation,
+                        metrics, baseline, completion, matching, reconstruction3d
+scripts/                runnable annotation, reconstruction, evaluation, replay,
+                        and HTML documentation tools
+tests/                  171 tests plus small synthetic regression fixtures
+data/demo/              small synthetic format fixture, tracked
+data/annotations/       RGB-only AI draft polygons, tracked; no source photographs
+docs/                   methods, validation, AI log, current repository audit
+docs/api/index.html     generated offline HTML for all 10 package modules
+docs/validation/        compact numeric evidence and current verification summary
+results/                local generated experiments; ignored except .gitkeep
+data/raw/               original external RGB-D data; ignored
 ```
 
-## 7. Installation and usage (Windows PowerShell)
+## Install and test
 
-**Requirements:** Python 3.10+ and Git (for version control).
+Python 3.10+ is declared. The locally verified preparation environment is Windows,
+CPython 3.13.7. CI configuration uses Ubuntu/Python 3.11; this preparation does not
+claim that a new remote CI run has completed. NumPy and Pillow are runtime
+dependencies; pytest and Matplotlib are development/test dependencies. HTML generation uses Python's
+standard-library `pydoc`, so pdoc/Sphinx is not required.
 
-Clone the GitHub repository or open the downloaded project folder, then run:
+From the repository root in Windows PowerShell:
 
 ```powershell
 py -3 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
+# Direct interpreter paths avoid an activation-policy requirement.
+.\.venv\Scripts\python.exe -m pip install -c constraints-tested.txt -e ".[dev]"
+.\.venv\Scripts\python.exe -m pytest -q -p no:cacheprovider
+.\.venv\Scripts\python.exe scripts/build_docs.py --check
 ```
 
-### Run the unit tests
+`constraints-tested.txt` records the tested runtime/test package versions for
+CPython 3.13; it is not an exhaustive cross-platform lock. On Python 3.10 use
+the unconstrained dependency ranges instead. Unconstrained supported installation is
+`python -m pip install -e ".[dev]"`. Optional `.[study]` adds Matplotlib for
+experiment plotting without pytest. Two existing Step 6 tests also import the
+study runner, so the full suite needs Matplotlib. HTML generation and the
+visible-mask demo do not need it.
+For Unix, use `.venv/bin/python` in place of the Windows interpreter path.
+
+The complete current suite has **171 passing tests**. See the
+[current test report](docs/07_test_report.md) for environment, commands and limits.
+
+## Run a demonstration without raw data
+
+The small synthetic fixture is already tracked. Do not regenerate it just to use
+the demo: the generator rewrites its files. Give every run a new output directory:
 
 ```powershell
-python -m pytest -q
+$run = Get-Date -Format "yyyyMMdd_HHmmss_fff"
+.\.venv\Scripts\python.exe scripts/run_visible_baseline.py --output "results/demo_visible_$run"
 ```
 
-### Create and audit a synthetic RGB-D fixture
+Inspect `overlay.png`, `skeleton.png`, `graph.json` and `report.json` in that new
+directory. This demonstrates input handling and skeleton extraction, not real
+reconstruction accuracy. The baseline runner can overwrite an existing output;
+always use a new name. Other reconstruction runners require a new output.
+
+Custom RGB and native-grid binary masks:
 
 ```powershell
-python scripts/make_demo_manifest.py
-python -m apple_tree_project.audit data/demo/manifest.csv --json-output results/demo_audit.json
+.\.venv\Scripts\python.exe scripts/run_visible_baseline.py `
+  --rgb "path/to/rgb.png" --visible-mask "path/to/visible.png" `
+  --provenance manual_visible --output "results/my_visible_001"
 ```
 
-This checks file pairing, dimensions, depth validity and provisional annotation consistency. The generated fixture is **synthetic** and cannot be used as evidence of reconstruction accuracy.
+Masks must be single-channel binary 0/1 or 0/255 and match the RGB dimensions.
+The polygon editor is `scripts/annotate_visible_branches.py --help`; its GUI
+needs Tkinter and independent human review of saved drafts.
 
-### Generate HTML API documentation
+## Completion, 3D and experiment reproduction
+
+- `scripts/run_branch_completion.py --help` compares Linear and Quadratic using
+  an explicit skeleton, occlusion mask and gaps JSON. Endpoint roles and occlusion
+  must not be fabricated from whole GT. There is no unified end-to-end RGB CLI.
+- `scripts/run_3d_reconstruction.py --help` lifts a graph with scalar depth,
+  branch support and a **complete verified Calibration contract**. Hidden-depth
+  inference is off unless explicitly enabled. `data/demo/calibration.json` is a
+  legacy audit fixture and is not a complete 3D calibration file.
+- Automatic detection applies the v2 angular ambiguity guard. Direct manually
+  supplied gaps use the existing completion cosine gate; these boundaries are
+  not identical. This known limitation is recorded, not changed in Step 7.
+- All unit tests and the visible demo run from a clean clone without real data
+  or archived experiments. Full historical evaluations and observation replay
+  require external saved artifacts. See [reproduction and submission instructions](docs/20_reproducibility.md).
+
+The original RGB-D dataset and large experiment directories are deliberately
+absent from Git. Local gallery paths such as `results/step61_fork_matching/index.html`
+work only when the separate evidence package is available. Do not run the fixed
+Step 6.1 develop/evaluate commands over the frozen output directory.
+
+## Documentation and submission
 
 ```powershell
-python scripts/build_docs.py
+.\.venv\Scripts\python.exe scripts/build_docs.py
+.\.venv\Scripts\python.exe scripts/build_docs.py --check
 ```
 
-Open the HTML file(s) inside `docs/api/`. API documentation describes the implemented modules and should be regenerated after code changes.
+Open [the HTML API index](docs/api/index.html). Every package module is discovered
+automatically; a source/page hash manifest detects missing or stale pages.
 
-## 8. Current implementation status
+The [current reproducibility guide](docs/20_reproducibility.md) describes clean-clone
+verification, saved-result replay and the external data required by historical runs.
+The [repository repair record](docs/21_repository_repair.md) lists code cleanup,
+backups, exact removals, tests and remaining limitations. Previous compliance and
+submission documents remain as historical academic records.
 
-| Component | Status |
-| --- | --- |
-| Engineering problem and scope | Complete — initial definition |
-| Manifest loading and metadata checks | Implemented |
-| RGB-D / annotation input audit | Implemented |
-| Binary prediction metrics | Implemented |
-| Synthetic input-format fixture | Implemented; demonstration only |
-| Automated tests and initial test report | Implemented |
-| Real dataset decoding and calibration | Inventory complete; alignment provisional; depth calibration unresolved |
-| Visible-only baseline reconstruction | Implemented: mask-assisted 2D skeleton/pixel graph; synthetic demonstration only |
-| Occluded-branch completion | Implemented: linear and quadratic; synthetic validation, real drafts only |
-| Full 3D skeleton reconstruction | Calibrated synthetic lifting implemented; real metric 3D unsupported |
-| Held-out quantitative model evaluation | Step 6 independent synthetic configurations; human-validated real accuracy remains pending |
+## Completed development stages
 
-See the dated [`development log`](docs/05_development_log.md) and [`test report`](docs/07_test_report.md). Test counts are specific to the code version and must be re-run after changes.
+| Stage | Completed work | Evidence |
+| --- | --- | --- |
+| 1 | Engineering definition, input contracts, audit and metric scaffold | [Definition](docs/01_project_definition.md) |
+| 2 | RGB-D inventory, annotation/alignment investigation | [Data inspection](docs/09_real_dataset_inspection.md), [alignment](docs/10_annotation_alignment.md) |
+| 3 | Mask-assisted skeleton and independent RGB-only annotation workflow | [Baseline](docs/11_visible_only_baseline.md), [draft review](docs/13_step3_annotation_revision.md) |
+| 4 | Linear/Quadratic gap completion and sensitivity study | [Completion](docs/14_step4_branch_completion.md) |
+| 5 | Calibrated synthetic 3D lifting; unresolved real calibration documented | [3D study](docs/15_step5_3d_reconstruction.md) |
+| 6 | Paired validation, profiling and conservative v2 numerical boundaries | [Validation](docs/16_step6_final_validation.md), [stability](docs/16_step6_numerical_stability.md) |
+| 6.1 | Frozen fork-anchored comparison and saved-result verification | [Matching study](docs/17_step61_fork_matching.md) |
 
-## 9. Development roadmap
+Completion of these stages does not imply verified real-tree reconstruction or
+completion of the student's separate final report/presentation obligations.
 
-- **Step 1:** Project definition, reproducible repository and input-audit foundation.
-- **Step 2:** Inspect the real dataset; document annotation schema, depth units and calibration.
-- **Step 3:** Implement the visible-only skeleton baseline.
-- **Step 4:** Implement geometry-based completion of partially occluded branches.
-- **Step 5:** Project observations into 3D and identify inferred geometry.
-- **Step 6:** Evaluate on held-out images/trees; compare methods, robustness and runtime.
-- **Step 7:** Finalise the 5–10 page report, HTML API docs, tests, AI reflection and demonstration.
+## Saved results and local-only evidence
 
-## 10. AI usage and academic integrity
+Small original metrics and selected synthetic figures are available in
+[the compact review index](docs/reproducibility/step61/index.html). These are
+copies of frozen evidence, not new experiments or an additional test set.
 
-ChatGPT assisted with the initial requirements interpretation, project scoping, repository structure, code scaffolding, tests and English draft documentation. The student must review and test generated material, make and justify technical decisions, record errors and revisions, and be able to explain the methods independently at the presentation. Actual AI contributions should be updated throughout development in [`docs/03_ai_usage_log.md`](docs/03_ai_usage_log.md).
+Large arrays, graph archives and RGB-D remain outside Git. If the separately
+provided synthetic replay archive is available, extract it outside the repository
+and run:
 
-## 11. Key references
+```powershell
+.\.venv\Scripts\python.exe scripts/replay_step61_saved.py `
+  --project . --results "path/to/step61_synthetic"
+```
 
-1. Monash University, *Y-shaped Tree Dataset for Tree Branch Prediction* — [dataset description](https://www.monash.edu/engineering/lmga/news/y-shaped-tree-dataset-for-tree-branch-prediction).
-2. Nti, I. K. et al. (2022), *Applications of artificial intelligence in engineering and manufacturing: a systematic review*, *Journal of Intelligent Manufacturing*, 33, 1581–1601. [DOI: 10.1007/s10845-021-01771-6](https://doi.org/10.1007/s10845-021-01771-6).
-3. *MMA3001 2026 Project Brief*, Monash University (course assessment requirements).
+Expected: 600 saved metric rows checked and 480 evaluation graphs replayed.
+The replay does not call the simulator or read truth as an inference input.
+It accepts only CRLF/LF conversion when checking frozen source hashes; numerical
+code changes still fail the source check. Historical results are never rewritten.
+All observations in this replay archive are synthetic; no Monash RGB-D is included.
 
-## 12. Licence
+## Data, licence and AI use
 
-The project scaffold includes an MIT licence for the original source code. This licence **does not** apply to third-party images, annotations, datasets or models. Review the licence choice and data usage restrictions before publication.
+The external Monash Y-shaped Tree Dataset is described in
+[the dataset inspection](docs/09_real_dataset_inspection.md) and
+[data integration guide](docs/04_data_integration.md). Alignment remains provisional.
+Keep original files unchanged; confirm third-party redistribution terms separately.
 
-### Real-data alignment stage (23 October 2026)
+[MIT LICENSE](LICENSE) covers original project code/documentation only, not
+third-party RGB-D data, photographs or labels. NumPy, Pillow and other dependencies
+retain their own licences. The generic copyright attribution should be confirmed
+by the student before final publication.
 
-The real dataset inventory is complete; annotation alignment candidates have now been compared on all 562 Summer RGB/GT pairs. See [annotation alignment evidence and baseline decision](docs/10_annotation_alignment.md) and [the existing inventory](docs/09_real_dataset_inspection.md). Full-frame stretch is provisional; a reviewed mismatch prevents claiming universal registration. A 2D visible-only prototype can proceed with independent visible labels, while supervised evaluation and metric 3D remain gated. Generate local comparisons with `python scripts/compare_annotation_alignment.py`; outputs are saved under `results/alignment_candidates/`.
-
-### Step 3 visible-only baseline
-
-Run `python scripts/run_visible_baseline.py` for the existing synthetic demonstration. Outputs (prediction, skeleton, pixel graph, overlay and provenance report) go to `results/visible_only_baseline/`. See [methods, usage, tests and limitations](docs/11_visible_only_baseline.md). The baseline preserves visible-mask gaps and never reads whole GT. Real-data evaluation requires independent visible labels; precise Summer GT alignment remains unresolved.
-
-### Step 3 real-RGB review
-
-The baseline requires an external visible mask; it does not segment RGB. A native
-RGB polygon editor (`scripts/annotate_visible_branches.py`) and batch diagnostic
-runner (`scripts/validate_visible_baseline.py`) now support reproducible review.
-A 12-image experiment used explicitly AI-authored RGB-only draft polygons, with
-0 human-accepted samples. See [actual diagnostics, commands and limitations](docs/12_step3_real_data_review.md).
-Full suite after coverage-review improvements: 63 tests pass. Independent human real-data accuracy validation remains
-pending; Step 4 has not started.
-
-See the [Step 3 coverage revision guide](docs/13_step3_annotation_revision.md) for
-zoom/pan, vertex editing, visible/occluded checkpoints, separate review/approval,
-graph warnings and final v4 before/after figures. Ten samples received conservative
-visible-wood revisions; two were retained because of ambiguity. All remain DRAFT.
-Open `results/step3_real_validation/coverage_revision_v4/run/index.html` locally.
-
-
-### Step 6 final validation
-
-Paired comparison of visible-only, linear and quadratic methods reuses Step 4/5 evidence and adds 48 independent synthetic configurations, 30 targeted diagnostics, negative cases, stage timings and a shared-preprocessing comparison workflow. All real annotations remain AI DRAFT. No real metric 3D accuracy is claimed. See [Step 6 report](docs/16_step6_final_validation.md), [HTML gallery](results/step6_final_validation/index.html) and [Step 5 calibration findings](docs/step5_calibration_followup.md). Run `python scripts/evaluate_step6.py --output results/step6_new_run` from the repository root using a new directory.
-
-
-### Step 6 v2 numerical boundary policy
-
-Use [the current numerical stability report](docs/16_step6_numerical_stability.md) and [v2 gallery](results/step6_final_validation_v2_boundary_policy/index.html). Earlier Step 6 tables/ZIP are preserved v1 history. Angular comparisons reject the fixed ±0.00001 degree ambiguity band. No threshold retuning or real metric 3D claims.
-
-
-### Step 6.1 fork-anchored matching
-
-The frozen 96-case synthetic comparison of fork-anchored and original matching is complete. See [report](docs/17_step61_fork_matching.md) and [gallery](results/step61_fork_matching/index.html). All 12 real masks remain AI DRAFT; no real metric 3D accuracy is claimed. Full suite: 171 passed.
+AI assistance is disclosed in [the AI usage log](docs/03_ai_usage_log.md). The
+student remains responsible for decisions, verified claims, references and the
+final contribution estimate and personal reflection. AI cannot certify human
+annotation acceptance or student understanding.

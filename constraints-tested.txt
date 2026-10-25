@@ -1,0 +1,7 @@
+# Tested runtime/test versions: Windows, CPython 3.13.7.
+# Install with: python -m pip install -c constraints-tested.txt -e ".[dev]"
+# This is a tested constraint set, not a complete cross-platform lock.
+numpy==2.3.4
+Pillow==12.0.0
+pytest==9.1.1
+matplotlib==3.10.7

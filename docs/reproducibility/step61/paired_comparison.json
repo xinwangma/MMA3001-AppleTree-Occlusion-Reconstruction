@@ -1,0 +1,43 @@
+[
+  {
+    "baseline": "linear",
+    "improved": "anchored_linear",
+    "paired_accepted_cases": 1,
+    "gained_cases": [
+      "evaluation_031",
+      "evaluation_066"
+    ],
+    "lost_cases": [
+      "evaluation_018",
+      "evaluation_060"
+    ],
+    "paired_mean_deltas": {
+      "hidden_added_recall_2px": 0.0,
+      "hidden_full_recall_2px": 0.0,
+      "full_chamfer_px": 0.0,
+      "chamfer_3d_m": 0.0,
+      "coverage_3cm": 0.0
+    }
+  },
+  {
+    "baseline": "quadratic",
+    "improved": "anchored_quadratic",
+    "paired_accepted_cases": 1,
+    "gained_cases": [
+      "evaluation_031",
+      "evaluation_066"
+    ],
+    "lost_cases": [
+      "evaluation_018",
+      "evaluation_053",
+      "evaluation_060"
+    ],
+    "paired_mean_deltas": {
+      "hidden_added_recall_2px": 0.0,
+      "hidden_full_recall_2px": 0.0,
+      "full_chamfer_px": -0.005665767847971237,
+      "chamfer_3d_m": -4.389356802970805e-05,
+      "coverage_3cm": 0.0
+    }
+  }
+]

@@ -1,3 +1,64 @@
+# Current test report — completed Step 1–6.1 project
+
+- Existing suite: **171 passed**, no failures/errors/skips, in both the workspace
+  and a fresh GitHub clone with the pending repairs applied locally.
+- Clean installation: NumPy 2.3.4, Pillow 12.0.0, pytest 9.1.1, Matplotlib 3.10.7,
+  CPython 3.13.7 on Windows. `pip check` and the source-only visible demo pass.
+- Original published clone's dev install reproduced missing-Matplotlib failures;
+  the repaired dev extra and explicit CI dev/study install resolve the setup issue.
+- All 10 API pages match source; links and English comments/docstrings checked.
+- Saved-result verification: 600 metric rows agree exactly; 480 evaluation graphs
+  replay within the archived tolerances, with exact topology/status/identity.
+- Algorithms, parameters, original tests, prior results and academic materials
+  are preserved. Only the inspected temporary code listed in the cleanup manifest
+  was removed. No new optimisation or real-world accuracy claim is made.
+
+Details: [verification summary](validation/completed_project_verification.json),
+[repair record](21_repository_repair.md), [reproduction guide](20_reproducibility.md).
+Uncommitted local checks are not a new remote Actions run.
+
+## Preserved historical reports
+
+<!-- COMPLETED_PROJECT_CURRENT_END -->
+
+# Current automated test report — Step 7 repository preparation
+
+The following results apply to the Step 7 working tree awaiting review. They do
+not imply these changes are committed or pushed. Historical counts below are
+version-specific records, not the current suite total.
+
+- Complete workspace suite: **171 passed**, 0 failures/errors/skips.
+- Independently installed temporary snapshot: **171 passed**, 0 failures/errors/skips.
+- Local interpreter: CPython 3.13.7 on Windows.
+- NumPy 2.3.4; Pillow 12.0.0; pytest 9.1.1; Matplotlib 3.10.7.
+- Fresh virtual environment: `pip install -c constraints-tested.txt -e ".[dev]"`;
+  `pip check` passed. No PYTHONPATH or user-site fallback was used in that environment.
+- Test command: `python -m pytest tests -q -p no:cacheprovider`, with a new temporary
+  base directory outside data/raw and JUnit XML saved locally.
+- API check: all 10 source modules, including completion, reconstruction3d and
+  matching; current source/page hashes and local links verified.
+- Tracked synthetic demo ran from the isolated installed snapshot with all five
+  output files and unchanged input hashes. No real data was required.
+- Algorithms, original tests, raw RGB-D and previous experiment files are preserved;
+  11410 existing data/results files retain hash, size and mtime.
+- `git diff --check` is part of the final preparation checks.
+
+Coverage includes mask validation, graph topology, Linear/Quadratic completion,
+anchored matching, calibration/backprojection, hidden-depth status, provenance,
+numerical boundaries, metrics and saved-result comparison policies. Test success
+does not prove real anatomical accuracy or camera calibration. Direct manual-gap
+angular checks differ from detector guards; baseline output overwriting and legacy
+demo calibration remain documented limitations, not algorithm fixes.
+
+Machine-readable summary: [step7_verification.json](validation/step7_verification.json).
+Detailed stdout/JUnit/install/preservation logs remain local under
+`data/raw/monash_y_tree/step7_staging/`; they are excluded from Git. Remote CI was
+not rerun or claimed successful by this local preparation.
+
+## Historical version-specific records
+
+<!-- STEP7_CURRENT_REPORT_END -->
+
 # Step 1 — Automated Test Report
 
 ## Test environment

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module apple_tree_project.matching</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="apple_tree_project.html" class="white">apple_tree_project</a>.matching</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="../../src/apple_tree_project/matching.py">../../src/apple_tree_project/matching.py</a></td></tr></table>
+    <p><span class="code">Fork-anchored&nbsp;Y&nbsp;matching&nbsp;with&nbsp;conservative&nbsp;geometric&nbsp;and&nbsp;topology&nbsp;gates.<br>
+&nbsp;<br>
+Roles&nbsp;inferred&nbsp;here&nbsp;are&nbsp;provisional&nbsp;geometry,&nbsp;never&nbsp;verified&nbsp;tree&nbsp;identity.<br>
+The&nbsp;original&nbsp;completion&nbsp;module&nbsp;and&nbsp;its&nbsp;fitters&nbsp;remain&nbsp;unchanged.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn">math<br>
+</td><td class="multicolumn">numpy<br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-continuity_state"><strong>continuity_state</strong></a>(
+    first,
+    second,
+    direction,
+    max_angle_deg=65.0,
+    max_curvature_deg=45.0
+)</dt><dd><span class="code">Compare&nbsp;full-support&nbsp;tangents&nbsp;and&nbsp;overlapping&nbsp;half-support&nbsp;tangents.<br>
+&nbsp;<br>
+Each&nbsp;half&nbsp;has&nbsp;at&nbsp;least&nbsp;three&nbsp;points.&nbsp;The&nbsp;fixed&nbsp;Step&nbsp;6&nbsp;v2&nbsp;angular&nbsp;guard<br>
+applies&nbsp;to&nbsp;both&nbsp;direction&nbsp;and&nbsp;curvature,&nbsp;including&nbsp;exact&nbsp;equality.</span></dd></dl>
+ <dl><dt><a name="-detect_anchored_gaps"><strong>detect_anchored_gaps</strong></a>(
+    skeleton,
+    *,
+    max_gap_px=80.0,
+    max_angle_deg=65.0,
+    max_curvature_deg=45.0,
+    support_points=12,
+    fork_margin_px=3.0
+)</dt><dd><span class="code">Match&nbsp;a&nbsp;fork-connected&nbsp;terminal&nbsp;to&nbsp;an&nbsp;unbranched&nbsp;detached&nbsp;fragment.<br>
+&nbsp;<br>
+A&nbsp;single&nbsp;acyclic&nbsp;three-arm&nbsp;visible&nbsp;fork&nbsp;is&nbsp;required.&nbsp;Arm&nbsp;labels&nbsp;come&nbsp;from<br>
+their&nbsp;terminals&nbsp;relative&nbsp;to&nbsp;the&nbsp;fork,&nbsp;rather&nbsp;than&nbsp;the&nbsp;lower-image&nbsp;axis.<br>
+Detached&nbsp;terminals&nbsp;must&nbsp;lie&nbsp;consistently&nbsp;in&nbsp;the&nbsp;same&nbsp;upright&nbsp;Y&nbsp;sector.<br>
+Nonunique&nbsp;matches&nbsp;are&nbsp;rejected,&nbsp;with&nbsp;no&nbsp;ranking&nbsp;or&nbsp;greedy&nbsp;tie&nbsp;breaking.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>POLICY</strong> = {'fork_margin_px': 3.0, 'max_angle_deg': 65.0, 'max_curvature_deg': 45.0, 'max_gap_px': 80.0, 'support_points': 12}</td></tr></table>
+</body></html>

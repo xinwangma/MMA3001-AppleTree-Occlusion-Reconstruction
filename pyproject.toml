@@ -11,7 +11,7 @@ dependencies = ["numpy>=1.24,<3", "Pillow>=10,<13"]
 
 [project.optional-dependencies]
 study = ["matplotlib>=3.7,<4"]
-dev = ["pytest>=7,<10", "pdoc>=14,<16"]
+dev = ["pytest>=7,<10", "matplotlib>=3.7,<4"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -1,0 +1,903 @@
+[
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/build_docs.py",
+    "reason": "Staging duplicate of retained generic scripts/build_docs.py",
+    "sha256": "81475a1b00585027628d5dc49df2cf0d2cb53e9933d9dbeecb15a4c2b2a7132b",
+    "size": 6183,
+    "mtime_ns": 1792928319389786500,
+    "module_docstring": "Generate/check offline HTML for every source module with standard-library pydoc.\n\nRun ``python scripts/build_docs.py`` from any directory. Use ``--check`` for\nread-only verification of source coverage, source/page hashes and local links.\nNo dataset, "
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__init__.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "d7786f1b3cb2e52e28b1085f0ea150fa7f029baad252b29af7415c790871f7df",
+    "size": 1494,
+    "mtime_ns": 1792927617395134500,
+    "module_docstring": "pypdf is a free and open-source pure-python PDF library capable of splitting,\nmerging, cropping, and transforming the pages of PDF files. It can also add\ncustom data, viewing options, and passwords to PDF files. pypdf can retrieve\ntext and metadata f"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/__init__.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "4b90536533533d71c4eb27717c1b950b77083be0dc360b24bfd24fbb36aa67e7",
+    "size": 1672,
+    "mtime_ns": 1792927617425250700
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_cmap.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "1eeb005c0befded26a7e07fefad55e28552d3767c0a304a12466e418b3906406",
+    "size": 20674,
+    "mtime_ns": 1792927617434243900
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_configuration.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "59485d9b87303c03fea8a4334457a27e5ece771f0b40c853ac3b1f22c1cf4432",
+    "size": 8794,
+    "mtime_ns": 1792927617621900000
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_doc_common.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "6d70929f50d61ab989ce8d69a9be3ed4a05215d251eeda6f2416f6fa8d418434",
+    "size": 71327,
+    "mtime_ns": 1792927617672032800
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_encryption.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "e019f8a9616f9ae53aa273d54e63d049c21445ee6f09c4a7b813cc8414070844",
+    "size": 58482,
+    "mtime_ns": 1792927617713729800
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_page.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "fdea885c4045dfe84118b3694c32b3d0ab4b8833556a8b7a4cdc884aabbb71ea",
+    "size": 112369,
+    "mtime_ns": 1792927617735400600
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_page_labels.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "1a5aa81e6fef08b16aeb37e90f4be2c1e2c906c1384072baa284fa230347c139",
+    "size": 11099,
+    "mtime_ns": 1792927617743322000
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_protocols.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "5ac64bc98f698c4906423c209defd6b2bcaec1d5e23fde0b2306e9382cf64aae",
+    "size": 4852,
+    "mtime_ns": 1792927617748398600
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_reader.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "f8cf07365580a278c5a58733ea7e31f378404f094a2485a800407c8adaa8d279",
+    "size": 69960,
+    "mtime_ns": 1792927617763399600
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_utils.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "36a14cf923e1932adacfc5331a80052f2f6cadc48b4ab4c9ce12c596b2ecc618",
+    "size": 28523,
+    "mtime_ns": 1792927617824259400
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_version.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "ac2d97ceec2485daec6f0f643bc5ca94ddde2a091e7384952326aa3e41a5a958",
+    "size": 206,
+    "mtime_ns": 1792927617830254300
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/_writer.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "f90408588ac2ac2a409bbfa20b78ecd5afee02a262aba7a1d7004c5e89f8fa14",
+    "size": 149305,
+    "mtime_ns": 1792927617854324200
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/constants.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "258061dab72b9538a004b5350da743d371eeccb44f4cc3fc27586b7a4bea23cb",
+    "size": 27032,
+    "mtime_ns": 1792927617910346900
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/errors.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "18bb3f09522cd6e62579695d22118c8d3cededd3c92fb8bdada16245aa5745fa",
+    "size": 3983,
+    "mtime_ns": 1792927617918286200
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/filters.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "84870970e06fce3f01da694c0177ee780ead00b4da2341a75103cbc0c2a752a2",
+    "size": 39334,
+    "mtime_ns": 1792927617930281100
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/pagerange.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "fd3355439fcf95c813006e3cecb4a45fd25166f81c89c9a16144d0d66a8ece28",
+    "size": 10212,
+    "mtime_ns": 1792927618092385400
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/papersizes.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "b638f09703716470df43644b06661090ab5adee767c9481381ef2684496fa78d",
+    "size": 1572,
+    "mtime_ns": 1792927618100401200
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/types.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "47e1422870ae1ced2d1a24831bd34f6f670b6351d6bb7c3fa278c2e2a0e192bc",
+    "size": 1851,
+    "mtime_ns": 1792927618107509200
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/__pycache__/xmp.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "5e3273c3963637232a3ab8ca063cfbd5dce58b04d3c6c751a3539637619785f4",
+    "size": 43140,
+    "mtime_ns": 1792927618122016400
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_cmap.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "6529a007c5c2708e7722dbf191fa005859ae5c2990c1ad7c07c2052d6c9bcb0b",
+    "size": 21485,
+    "mtime_ns": 1792927617395134500,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/__init__.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "bd56ce01215af54c771e42b4228dd415aba640fe0970d2f1f63341353351d980",
+    "size": 1510,
+    "mtime_ns": 1792927617401881100,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/__pycache__/__init__.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "019e82e3f02ba86f32492a33049581f55b68a588500d8b16fa1ba34b66b83bde",
+    "size": 2141,
+    "mtime_ns": 1792927617440251000
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/__pycache__/_codecs.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "37e8e98ba02bbbdda2e6b05875bbb51c11708ae0532f8e38b04090abcff7c163",
+    "size": 10541,
+    "mtime_ns": 1792927617448249600
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/__pycache__/adobe_glyphs.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "fea7776a5a5648216cbce94a162827af5800567d4534279d9b361d166e8f8fe2",
+    "size": 875569,
+    "mtime_ns": 1792927617547917800
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/__pycache__/core_font_metrics.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "ec1c9714d99a6d53ce72af394d981db3d5f9240212adc01884a41a2f8dd34ff1",
+    "size": 101664,
+    "mtime_ns": 1792927617584144100
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/__pycache__/pdfdoc.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "4ec52c3fbd9ca4bdf76e42e2c425cc7fb4699781ea62ce3d1feccec39ac9be2e",
+    "size": 1616,
+    "mtime_ns": 1792927617592470600
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/__pycache__/std.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "301c2d5f9349e248352fb68796d3e8233b77144d4d4921781112114efee758eb",
+    "size": 1507,
+    "mtime_ns": 1792927617599474900
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/__pycache__/symbol.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "8e32e4189a4359265d7914d7d946a6ac9c885b8ae5a2f7680d9d42653eee823d",
+    "size": 1914,
+    "mtime_ns": 1792927617605499500
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/__pycache__/zapfding.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "2fe3e3a910a85280ff5b092541e8f909b6c3911edbe9a7ac7f3c056c7a761ce8",
+    "size": 2146,
+    "mtime_ns": 1792927617611994200
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/_codecs.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "ead39a397326cd52a6e0a433e33bbf6cd0cae6e24fb6ab06b93e069c4a764c43",
+    "size": 10712,
+    "mtime_ns": 1792927617402885300,
+    "module_docstring": "This module is for codecs only.\n\nWhile the codec implementation can contain details of the PDF specification,\nthe module should not do any PDF parsing."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/adobe_glyphs.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "69ac4e46ea50409ee46cb0c76e35a280b67aa60f06f7fe5ea832a2349c72923e",
+    "size": 577665,
+    "mtime_ns": 1792927617404798600,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/core_font_metrics.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "dbb26cac9a39511246215ed90ce09427259f066e8b0567aaeefdce5b3a05f21f",
+    "size": 114976,
+    "mtime_ns": 1792927617404798600,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/pdfdoc.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "c5f4af30562cbf1b9a490d14bbdbd90ca681d16bbce61d6e0a20758bdac07145",
+    "size": 4269,
+    "mtime_ns": 1792927617405797100,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/std.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "0f240cb84a40184a52f6ecb58d67f87278fe92a4a13ce0228f9b08ed0d580fc1",
+    "size": 2630,
+    "mtime_ns": 1792927617405797100,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/symbol.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "08fe958d172c72b9bcca6007f74c6977155a7a5c22e8c49bd536f5c0d0e1d359",
+    "size": 4642,
+    "mtime_ns": 1792927617405797100,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_codecs/zapfding.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "e39a9c635d716c1c2da21ebfb7467fef33631bbfaa238d752d14155d828faf65",
+    "size": 4655,
+    "mtime_ns": 1792927617405797100,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_configuration.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "bb46eff45e5d8dcd4a88f4c5f4b57e3c58f25a8798852b2ae83c4626b191f2ce",
+    "size": 11924,
+    "mtime_ns": 1792927617396138900,
+    "module_docstring": "Configuration value handling."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_crypt_providers/__init__.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "c5441b160310bca31a38e4f7454756ddb4bc7d94a147c3c13b3eab7ac7f05855",
+    "size": 2770,
+    "mtime_ns": 1792927617406796700,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_crypt_providers/__pycache__/__init__.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "c1acb2d62c6b24a1f0d74a1f27700852c1aff263bf7d68e7cbf8e3716461df9c",
+    "size": 988,
+    "mtime_ns": 1792927617628905500
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_crypt_providers/__pycache__/_base.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "724cbb16f03cab3dada974d8be2483e746e99da3f7a3771de5ed9a5b89ac66bc",
+    "size": 992,
+    "mtime_ns": 1792927617634930100
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_crypt_providers/__pycache__/_cryptography.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "e8e5380c97f1dbeed5c1fb957a51c797d944c281ce1b9e79c3f69aea0b2c207f",
+    "size": 9445,
+    "mtime_ns": 1792927617643453000
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_crypt_providers/__pycache__/_fallback.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "ae50423e5eec3796b51ec57a60359de775930aa14d80f68db6f6e2db3ceecef3",
+    "size": 4182,
+    "mtime_ns": 1792927617650465100
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_crypt_providers/__pycache__/_pycryptodome.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "997832d138511020e00ecf2b8241df7dab29269bcb0ac1e34d8d4eae945d71dc",
+    "size": 5287,
+    "mtime_ns": 1792927617657472200
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_crypt_providers/_base.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "34505711d85bae0f64d353d57cd37f93b94401897606481720e8b9a1f53ff91f",
+    "size": 1735,
+    "mtime_ns": 1792927617406796700,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_crypt_providers/_cryptography.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "33183bb4201aa15e950085a97ee874e2af254be0aaeb9ab0de643d7e93100526",
+    "size": 7313,
+    "mtime_ns": 1792927617406796700,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_crypt_providers/_fallback.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "81772ba3f2bbab82180cbe57195471a059978d75cc6ba4e57830f0c56c828f81",
+    "size": 3382,
+    "mtime_ns": 1792927617407796000,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_crypt_providers/_pycryptodome.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "bd9102129a13f4ebe9a46ebb74aec456de51e5aa491bd5fce588a3479ed2a6f6",
+    "size": 4050,
+    "mtime_ns": 1792927617407796000,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_doc_common.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "ece49395930e1fe657a9540466188fe42091ffe2b448afdef8883ad1894e086b",
+    "size": 65445,
+    "mtime_ns": 1792927617396138900,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_encryption.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "f10a2d457faf30ec041d38c50084fa9ebac05609f18a69ddb327970d7583f041",
+    "size": 57278,
+    "mtime_ns": 1792927617397379500,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_page.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "ad59b17c00677813aa7da96c721385c729637a0845056e4de69af928b753227a",
+    "size": 104699,
+    "mtime_ns": 1792927617397379500,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_page_labels.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "55ae47e2e1fcec75ea33d3f97478c1fae1684883414cd8ee04a0a066dec40e06",
+    "size": 11385,
+    "mtime_ns": 1792927617397379500,
+    "module_docstring": "Page labels are shown by PDF viewers as \"the page number\".\n\nA page has a numeric index, starting at 0. Additionally, the page\nhas a label. In the most simple case:\n\n    label = index + 1\n\nHowever, the title page and the table of contents might have R"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_protocols.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "4e4ea32b83d1f71cc4ec44e7a9a7f6ef5494299913b3a2254672d118f9588ff7",
+    "size": 2397,
+    "mtime_ns": 1792927617398386000,
+    "module_docstring": "Helpers for working with PDF types."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_reader.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "0f65aa59c8b2dc89b67a07a076de21ccab56a7a385d52220f260b5fce366b066",
+    "size": 76530,
+    "mtime_ns": 1792927617398386000,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/__init__.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "08ee4beeccbae52c021c87c61eed6f9bbfeaef5a9ea1f994170921a2de15e4fb",
+    "size": 11093,
+    "mtime_ns": 1792927617407796000,
+    "module_docstring": "Code related to text extraction.\n\nSome parts are still in _page.py. In doubt, they will stay there."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/__pycache__/__init__.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "8ba1ffa79004427b0994714aac50e0c23db452ab613bcc882b751f371bdf5e9a",
+    "size": 12242,
+    "mtime_ns": 1792927617771327600
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/__pycache__/_text_extractor.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "1374976f92b6f9916746f26758d6c9783355c9558e7e1a7416edb37a27f33037",
+    "size": 16837,
+    "mtime_ns": 1792927617813249000
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/_layout_mode/__init__.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "56adb80f37575f9af91995d319579011c9212ed332099acdf207db4a506efecc",
+    "size": 348,
+    "mtime_ns": 1792927617408796300,
+    "module_docstring": "Layout mode text extraction extension for pypdf"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/_layout_mode/__pycache__/__init__.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "2ff7cb8392e02b43cbe8bc463073d89d9dbda607dec90f0f484b00733232a6ef",
+    "size": 529,
+    "mtime_ns": 1792927617778327600
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/_layout_mode/__pycache__/_fixed_width_page.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "cee5b2a4dabaf3e67c76a4efa3ec881583686f5afd6d854dc4f9dfa31cb4d92f",
+    "size": 21104,
+    "mtime_ns": 1792927617788782300
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/_layout_mode/__pycache__/_text_state_manager.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "2fe76cd4224f6fb64cf8ed1ee0ad251e87616782fc8fca366648b33b784bdac0",
+    "size": 11527,
+    "mtime_ns": 1792927617797710600
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/_layout_mode/__pycache__/_text_state_params.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "e9f6e89edc785bb32041d77fc44f8449d9405b99a55fb48fcf0b58951a7e6458",
+    "size": 9809,
+    "mtime_ns": 1792927617804720300
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/_layout_mode/_fixed_width_page.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "514b42d0e71ebdc73cdab592136b0582e23ad274b8d4f435759b5906692577e1",
+    "size": 19711,
+    "mtime_ns": 1792927617408796300,
+    "module_docstring": "Extract PDF text preserving the layout of the source PDF"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/_layout_mode/_text_state_manager.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "28dad5586bb9ef50ae0a7cdc30c4294868d92d89284e4775a84a7f4541441ef9",
+    "size": 8253,
+    "mtime_ns": 1792927617409797000,
+    "module_docstring": "manage the PDF transform stack during \"layout\" mode text extraction"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/_layout_mode/_text_state_params.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "a0c4b8cb2f4763835c4ebded2f1272235182e1c759e46cc3ad43f425ac5f5261",
+    "size": 6625,
+    "mtime_ns": 1792927617409797000,
+    "module_docstring": "A dataclass that captures the CTM and Text State for a tj operation"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_text_extraction/_text_extractor.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "8e13a075dc992d1ecdd658f840607107a2a61f63202bf2007e5ad97e82650e12",
+    "size": 15582,
+    "mtime_ns": 1792927617408796300,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_utils.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "451a37fa5e6765a5e2dbf8014564b4e3e3bac43651d8b2318a4277ab4003ae19",
+    "size": 25462,
+    "mtime_ns": 1792927617398386000,
+    "module_docstring": "Utility functions for PDF library."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_version.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "3a227d5c7fd3409a87a53f5d2ff97faab164a7bf985b755591533dd7586701d7",
+    "size": 23,
+    "mtime_ns": 1792927617399386700,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/_writer.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "9fff679312b41b2fa5b7fe8998f6a161494fa27fc09b0dc4e312c6cd089808f5",
+    "size": 141410,
+    "mtime_ns": 1792927617399386700,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/actions/__init__.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "d8bdd81ef60846bab097640490991e4b63bd6b521eb0356ed696e24854299518",
+    "size": 391,
+    "mtime_ns": 1792927617409797000,
+    "module_docstring": "PDF includes a wide variety of standard action types, whose characteristics and\nbehaviour are defined by an action dictionary. These are defined in this\nsubmodule.\n\nTrigger events are the other component of actions, and are specific to their\nassociat"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/actions/__pycache__/__init__.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "14804e0034c5c0113ffb76316148cd0a1b6db387899c4c3cf212e8a746c8b9ca",
+    "size": 586,
+    "mtime_ns": 1792927617860342100
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/actions/__pycache__/_actions.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "24e64851cc886a527244ffb82990fceb5915fa330f191f8068480b8f1449135b",
+    "size": 8616,
+    "mtime_ns": 1792927617868249300
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/actions/_actions.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "9ad300bde70c006ba9484e0d78296103c0dcdafa75038248f3bde6a988cd6c4b",
+    "size": 7648,
+    "mtime_ns": 1792927617410796600,
+    "module_docstring": "Action types"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/annotations/__init__.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "7f693ffa3027dfd082076ecac50fdef771a29e7ce40076d49e749e1899758f21",
+    "size": 990,
+    "mtime_ns": 1792927617410796600,
+    "module_docstring": "PDF specifies several annotation types which pypdf makes available here.\n\nThe names of the annotations and their attributes do not reflect the names in\nthe specification in all cases. For example, the PDF standard defines a\n'Square' annotation that d"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/annotations/__pycache__/__init__.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "2aef2d9415895206a0f76f065ae240f76686360e565b6a91374a5c30f07ddbc4",
+    "size": 1158,
+    "mtime_ns": 1792927617876253600
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/annotations/__pycache__/_base.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "3239ef37a5e752c722e9708945406f2d3bb2263ef0341643742c123a3d049183",
+    "size": 1626,
+    "mtime_ns": 1792927617883249600
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/annotations/__pycache__/_markup_annotations.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "3009e64bc1f86122f992906b830350beca865a4b1a7cdced05c1b817f51c2ecd",
+    "size": 15130,
+    "mtime_ns": 1792927617892254300
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/annotations/__pycache__/_non_markup_annotations.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "bd755ca4c08b3b0becc500fbe9250550e634c2319b2e2b2196713c374ad68754",
+    "size": 4764,
+    "mtime_ns": 1792927617900264300
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/annotations/_base.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "608453cd3764aa3f035164939b2d1fae47d3af88e87b91d41b344e5287f8a08a",
+    "size": 961,
+    "mtime_ns": 1792927617410796600,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/annotations/_markup_annotations.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "c210635217f7c5195cae67829cd82a1679ad2767fb07c2289f82b8e88f74a079",
+    "size": 11858,
+    "mtime_ns": 1792927617410796600,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/annotations/_non_markup_annotations.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "fd2cd3ce864ce01dff1bf57a33ff266c9e7b630d2d024f601db347ea5211ab70",
+    "size": 3695,
+    "mtime_ns": 1792927617411832800,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/constants.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "579bd3b09defab4b63ac63f7effb4713ade10722c8c7799b8566aa80917c3624",
+    "size": 24233,
+    "mtime_ns": 1792927617399386700,
+    "module_docstring": "Various constants, enums, and flags to aid readability."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/errors.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "070d56f61c4eb03830ab053a628436974f89894c93aba979423542afe5b81850",
+    "size": 1947,
+    "mtime_ns": 1792927617400386200,
+    "module_docstring": "All errors/exceptions pypdf raises and all of the warnings it uses.\n\nPlease note that broken PDF files might cause other Exceptions."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/filters.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "7567a0838190cd5e03508d9e945ab11bf4fe1822a80834b5bf958c58efa76aa9",
+    "size": 38450,
+    "mtime_ns": 1792927617400386200,
+    "module_docstring": "Implementation of stream filters; §7.4 Filters of the PDF 2.0 specification.\n\n§8.9.7 Inline images of the PDF 2.0 specification has abbreviations that can be\nused for the names of filters in an inline image object."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__init__.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "3bbfbe5ca9a0e6fd1f3f7718960def531794e3c35ceec6b204cb03119eb546b5",
+    "size": 3525,
+    "mtime_ns": 1792927617411832800,
+    "module_docstring": "Implementation of generic PDF objects (dictionary, number, string, ...)."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/__init__.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "4367118e5d123f7bbaccad5cc1b4a8162cbec3de8d3adb421523d1262aadad1f",
+    "size": 1906,
+    "mtime_ns": 1792927617938279500
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_appearance_stream.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "ae8cc0f799778cc1600b59835ddcfe6110ca93ddb906fbb2197da7c3bae74593",
+    "size": 39833,
+    "mtime_ns": 1792927617950797800
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_base.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "28603cfd355b67d870696c801286a3ba43eedb440a11260e7af548a20fe286a8",
+    "size": 43267,
+    "mtime_ns": 1792927617966850400
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_color.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "4ab20c95a04a03c92f60c1792ce3a8ee7c5e6eb57f5375abadceed0b1f6a58ba",
+    "size": 4897,
+    "mtime_ns": 1792927617973844100
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_data_structures.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "3e01ea22de9919e3e9f79799eeba99c0d318523eaaf775b1091d2fcd71f4e6d7",
+    "size": 82752,
+    "mtime_ns": 1792927617992853200
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_files.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "1759f52c32e8cdbb875a7f58cb2902a7817b53418da21a40cd16239f8dff4204",
+    "size": 22135,
+    "mtime_ns": 1792927618002921300
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_fit.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "2f07de50373ee11a7274dc7ace8c325b0c4dbef5596f99396aa6dfa1a56231a4",
+    "size": 6562,
+    "mtime_ns": 1792927618009855200
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_font.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "5ae90bba3dafd2e4be53c020e4a66cfce8aa28ae970a4f2fbd25a813e7656caa",
+    "size": 40974,
+    "mtime_ns": 1792927618023378400
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_image_inline.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "471a60c6cba0adc55562b724238b3d98eebb97c0278ce30650b28498f490fa07",
+    "size": 11965,
+    "mtime_ns": 1792927618033443100
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_image_xobject.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "c9998dd6e8aa30a422012ea16a4a9b1616f42d1d11b6239a49fdf173824504d7",
+    "size": 26817,
+    "mtime_ns": 1792927618045385100
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_link.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "4b317599b3de50c021b840bef538e34ffe2ac83d0de1e7000dd39007f5799ef0",
+    "size": 6545,
+    "mtime_ns": 1792927618053386200
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_outline.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "ee135112e3fcd3a83550581a85750d6463ffa6555ea0224f95c20d770fe06d9e",
+    "size": 1917,
+    "mtime_ns": 1792927618060385500
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_rectangle.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "a1422d8d6356c51dcbf16e8a27fdf7c5075326e0a26f7f28c78c1f1e43748899",
+    "size": 7834,
+    "mtime_ns": 1792927618067457200
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_utils.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "85274e0685865e7aff8d872cbdd40d0bdc99c81b3e62b263c7f728aeef8869d4",
+    "size": 8942,
+    "mtime_ns": 1792927618074465000
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/__pycache__/_viewerpref.cpython-313.pyc",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "f098cd8dbc954bd45b0b3abb938d8c9ff64d7452ab4ceb79a4959d0d4402a654",
+    "size": 9722,
+    "mtime_ns": 1792927618082464900
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_appearance_stream.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "4f572ec49a2c290b0389ed7b30758ac21855f1c3b8efc71eeb013e29ebfe22b4",
+    "size": 43800,
+    "mtime_ns": 1792927617411832800,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_base.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "90c50d931fdc97db44bf57894fa2fe6239ece307e1b831896e54e5c2de6698b7",
+    "size": 34314,
+    "mtime_ns": 1792927617412832800,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_color.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "2b10852d96453098d4b9b2f437ad85042a552b37038403c1f6719ba29e3c795c",
+    "size": 3187,
+    "mtime_ns": 1792927617412832800,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_data_structures.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "68e58bac82fde745fbc3fdb4f84dd1a67b4cd819065499c5b4d9d41eef781841",
+    "size": 77207,
+    "mtime_ns": 1792927617413833100,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_files.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "d28b3ece6aa1cec4ed623e83ab52e2cd70fd592118e5855508415352223d9ebd",
+    "size": 19061,
+    "mtime_ns": 1792927617413833100,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_fit.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "607a2571a31e1c67d84fdb0d1a3dbfd04b52a09619d9a261b4aa9525c03887f9",
+    "size": 5550,
+    "mtime_ns": 1792927617413833100,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_font.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "21c48386bbf2a91b23f482bb8f5049c743a8fd6f1d965f8f3194846367a3a4f5",
+    "size": 43913,
+    "mtime_ns": 1792927617413833100,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_image_inline.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "a708cc06e98c88b0972a6367e6513282b0fd35599c8429c26ff0573a0058f7cc",
+    "size": 15158,
+    "mtime_ns": 1792927617415238500,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_image_xobject.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "4217d830e34cb64e02e692ffbf9b6718fc3a8637b6370077341dca759eefa432",
+    "size": 28168,
+    "mtime_ns": 1792927617415238500,
+    "module_docstring": "Functions to convert an image XObject to an image"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_link.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "90835ae593a2a461f163f616fdf231178cf44d134a970c388d161a1822d34116",
+    "size": 6207,
+    "mtime_ns": 1792927617415238500,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_outline.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "3c4b924f86fe2a6010203009d05872c4dec036626376c59a4ddc4aa3b862ab78",
+    "size": 1094,
+    "mtime_ns": 1792927617415238500,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_rectangle.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "ec7ac97ce31ab906ad0368245a17074a4cc1ec5e245a671afba90d03a1d5a3a3",
+    "size": 3969,
+    "mtime_ns": 1792927617416242400,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_utils.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "33c8bde72a42e65d9eef5d74f157aaf74bdb6d4b65427beefbe256fc0b32c793",
+    "size": 8149,
+    "mtime_ns": 1792927617416242400,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/generic/_viewerpref.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "20912ec8cd304ebd6a36004e0bede202e3c1e4f9630ee771f7de14a2c3eb05dc",
+    "size": 7577,
+    "mtime_ns": 1792927617416242400,
+    "module_docstring": ""
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/pagerange.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "0209c3144e2959cf34d1800cfec3dc1afcb6f747f70f93588abaf6e478753b46",
+    "size": 7907,
+    "mtime_ns": 1792927617400386200,
+    "module_docstring": "Representation and utils for ranges of PDF file pages.\n\nCopyright (c) 2014, Steve Witham <switham_github@mac-guyver.com>.\nAll rights reserved. This software is available under a BSD license;\nsee https://github.com/py-pdf/pypdf/blob/main/LICENSE"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/papersizes.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "e93cf9b1f34dff724e51aa58f3753e95a928867a57600d2148440d98e54b14bf",
+    "size": 1413,
+    "mtime_ns": 1792927617400386200,
+    "module_docstring": "Helper to get paper sizes."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/types.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "b09ef01f393b111fc227b90ffacf2ef5ac459e40979c5a6bf27cdc8f50314dab",
+    "size": 1915,
+    "mtime_ns": 1792927617401881100,
+    "module_docstring": "Helpers for working with PDF types."
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/pdf_dependencies/pypdf/xmp.py",
+    "reason": "Temporary PDF extraction dependency used only to inspect the Brief; not imported by Step 1-6.1",
+    "sha256": "0fb1996e355223d8ad669d289f16eb7e0ad9cd3314e8005cdb4c03defd876fea",
+    "size": 32259,
+    "mtime_ns": 1792927617401881100,
+    "module_docstring": "Anything related to Extensible Metadata Platform (XMP) metadata.\n\nhttps://en.wikipedia.org/wiki/Extensible_Metadata_Platform"
+  },
+  {
+    "path": "data/raw/monash_y_tree/step7_staging/prepare_step7.py",
+    "reason": "Step 7-only temporary preparation runner",
+    "sha256": "9134767abf58121a26ceec345a8a4af3d2cb4daa4ae8df7dbd75fbd7e53dac96",
+    "size": 16733,
+    "mtime_ns": 1792928320243239000,
+    "module_docstring": "Apply documentation-only Step 7 changes and verify an isolated installation.\n\nWrites project documentation/config and the documentation generator, never source\nalgorithms, datasets or existing experimental results. Does not stage/commit/push."
+  }
+]

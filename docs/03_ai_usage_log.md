@@ -70,3 +70,33 @@ coverage review still require actual people. Details: docs/13_step3_annotation_r
 ## 2026-10-25 — Step 6.1 interrupted-work recovery
 
 Codex recovered the uncommitted fork-anchored detector/tests/evaluation script, ran development and frozen evaluation, and generated evidence-based documentation. Initial test setup errors were due to a missing temporary parent and then the raw-output protection gate; using an external temporary directory produced 171 passing tests without algorithm changes. Synthetic results and AI draft real-image hypotheses require student review; no human acceptance or real calibration is implied.
+
+
+## Step 7 — repository preparation and verification
+
+Codex read the local 2026 Project Brief, audited source/docstring presence and
+main-branch inventory, updated repository documentation and the standard-library
+HTML generator, and ran tests in the workspace and a fresh installed snapshot.
+Google Drive discovery did not locate the Brief; the actual local PDF was used.
+The pypdf helper was temporary tooling, not a project dependency. A blocked
+sandbox network request was rerun with approval; an initial PDF console encoding
+error was resolved by UTF-8 extraction. A clean install initially exposed two
+missing-Matplotlib test failures (169 passed); the dev extra was corrected and
+the complete isolated suite rerun. API text hashes normalise CRLF/LF so the
+Windows-generated documentation remains checkable after a Linux checkout.
+No algorithm or result was changed.
+AI contribution to this preparation's draft documentation/tooling is substantial;
+the student must review it and supply their own overall estimate, decisions and
+personal learning reflection. No student approval, assessor access or real accuracy
+has been inferred from automated checks. No commit/push/submission was performed.
+
+
+## Completed-project documentation and reproducibility repair
+
+AI assistance inspected actual code purpose before removing temporary preparation
+scripts and PDF helper code. Source/hash backups and the per-file removal manifest
+preserve accountability. It updated generic docs/setup, added saved-result replay,
+and tested the published clone separately from the locally repaired clone. Numeric
+results and conclusions were preserved. The student must review these changes;
+no commit, push, dataset upload, human annotation acceptance or online CI success
+was inferred. All numerical inference code and original tests remain unchanged.

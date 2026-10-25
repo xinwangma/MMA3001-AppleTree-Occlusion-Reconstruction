@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module apple_tree_project.completion</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="apple_tree_project.html" class="white">apple_tree_project</a>.completion</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="../../src/apple_tree_project/completion.py">../../src/apple_tree_project/completion.py</a></td></tr></table>
+    <p><span class="code">Conservative&nbsp;2D&nbsp;gap&nbsp;completion&nbsp;on&nbsp;the&nbsp;Step&nbsp;3&nbsp;pixel&nbsp;skeleton.<br>
+&nbsp;<br>
+Anatomical&nbsp;identity&nbsp;and&nbsp;occlusion&nbsp;are&nbsp;explicit&nbsp;inputs,&nbsp;never&nbsp;inferred&nbsp;from&nbsp;GT.<br>
+Coordinates&nbsp;are&nbsp;native&nbsp;image&nbsp;pixels&nbsp;(x&nbsp;right,&nbsp;y&nbsp;down).</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn">PIL.Image<br>
+</td><td class="multicolumn">PIL.ImageDraw<br>
+</td><td class="multicolumn">math<br>
+</td><td class="multicolumn">numpy<br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-complete_gaps"><strong>complete_gaps</strong></a>(
+    skeleton,
+    gaps,
+    occlusion_mask,
+    method='linear',
+    *,
+    max_gap_px=80.0,
+    support_points=8,
+    max_angle_deg=65.0,
+    tangent_weight=1.0
+)</dt><dd><span class="code">Complete&nbsp;explicit&nbsp;gap&nbsp;requests;&nbsp;return&nbsp;accepted/rejected&nbsp;records&nbsp;and&nbsp;graph.<br>
+&nbsp;<br>
+gaps:&nbsp;dictionaries&nbsp;with&nbsp;unique&nbsp;id,&nbsp;branch&nbsp;in&nbsp;ROLES,&nbsp;start/end&nbsp;integer&nbsp;[x,y].<br>
+Endpoints&nbsp;must&nbsp;be&nbsp;in&nbsp;different&nbsp;components,&nbsp;have&nbsp;sufficient&nbsp;unbranched&nbsp;local<br>
+support,&nbsp;face&nbsp;each&nbsp;other,&nbsp;and&nbsp;be&nbsp;used&nbsp;at&nbsp;most&nbsp;once.&nbsp;All&nbsp;added&nbsp;pixels&nbsp;must&nbsp;be<br>
+in&nbsp;occlusion_mask.&nbsp;Raster&nbsp;paths&nbsp;touching&nbsp;unrelated&nbsp;geometry&nbsp;or&nbsp;introducing<br>
+cycles/junctions&nbsp;are&nbsp;rejected.&nbsp;Requests&nbsp;are&nbsp;processed&nbsp;in&nbsp;caller&nbsp;order.<br>
+This&nbsp;function&nbsp;accepts&nbsp;a&nbsp;skeleton,&nbsp;not&nbsp;a&nbsp;thick&nbsp;visible&nbsp;mask;&nbsp;use&nbsp;Step&nbsp;3&nbsp;first.</span></dd></dl>
+ <dl><dt><a name="-detect_candidate_gaps"><strong>detect_candidate_gaps</strong></a>(
+    skeleton,
+    *,
+    max_gap_px=80.0,
+    max_angle_deg=65.0,
+    max_curvature_deg=45.0,
+    support_points=8,
+    endpoint_roles=None
+)</dt><dd><span class="code">Enumerate&nbsp;geometry-only&nbsp;hypotheses,&nbsp;rejecting&nbsp;nonunique&nbsp;endpoint&nbsp;matches.<br>
+&nbsp;<br>
+No&nbsp;occlusion&nbsp;is&nbsp;asserted.&nbsp;An&nbsp;optional&nbsp;mapping&nbsp;(x,y)-&gt;role&nbsp;supplies&nbsp;reviewed<br>
+identities.&nbsp;Otherwise&nbsp;image-upright&nbsp;Y&nbsp;geometry&nbsp;assigns&nbsp;provisional&nbsp;roles<br>
+around&nbsp;a&nbsp;lower-trunk&nbsp;axis.&nbsp;These&nbsp;are&nbsp;screening&nbsp;labels,&nbsp;not&nbsp;anatomical&nbsp;truth.<br>
+Returned&nbsp;candidates&nbsp;still&nbsp;require&nbsp;an&nbsp;occlusion&nbsp;region&nbsp;for&nbsp;complete_gaps.<br>
+Angular&nbsp;gates&nbsp;use&nbsp;strict_below_angular_guard_v1:&nbsp;a&nbsp;fixed&nbsp;1e-5&nbsp;degree&nbsp;band<br>
+around&nbsp;each&nbsp;threshold&nbsp;is&nbsp;rejected,&nbsp;including&nbsp;exact&nbsp;mathematical&nbsp;equality.</span></dd></dl>
+ <dl><dt><a name="-fit_quadratic"><strong>fit_quadratic</strong></a>(first, second, tangent_weight=1.0)</dt><dd><span class="code">Fit&nbsp;P(t)=A+t(B-A)+t(t-1)C&nbsp;with&nbsp;exact&nbsp;endpoints.<br>
+&nbsp;<br>
+Support&nbsp;t&nbsp;is&nbsp;its&nbsp;projection&nbsp;onto&nbsp;the&nbsp;endpoint&nbsp;chord,&nbsp;including&nbsp;t&nbsp;outside<br>
+[0,1].&nbsp;Minimize&nbsp;mean&nbsp;squared&nbsp;visible&nbsp;support&nbsp;residual&nbsp;plus&nbsp;weighted&nbsp;mean<br>
+squared&nbsp;endpoint&nbsp;derivative&nbsp;residual.&nbsp;Derivative&nbsp;targets&nbsp;have&nbsp;chord&nbsp;length<br>
+and&nbsp;directions&nbsp;estimated&nbsp;from&nbsp;local&nbsp;visible&nbsp;geometry.&nbsp;A&nbsp;quadratic&nbsp;cannot<br>
+generally&nbsp;satisfy&nbsp;both&nbsp;endpoint&nbsp;directions&nbsp;exactly;&nbsp;they&nbsp;are&nbsp;soft&nbsp;constraints.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>ANGLE_BOUNDARY_GUARD_DEG</strong> = 1e-05<br>
+<strong>ANGLE_BOUNDARY_POLICY</strong> = 'strict_below_angular_guard_v1'<br>
+<strong>ROLES</strong> = {'left_primary', 'right_primary', 'trunk'}</td></tr></table>
+</body></html>

@@ -16,19 +16,31 @@
 <td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
     
 <tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
-<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="PIL.Image.html">PIL.Image</a><br>
-</td><td class="multicolumn"><a href="PIL.ImageDraw.html">PIL.ImageDraw</a><br>
-</td><td class="multicolumn"><a href="hashlib.html">hashlib</a><br>
-</td><td class="multicolumn"><a href="numpy.html">numpy</a><br>
+<td class="singlecolumn"><table><tr><td class="multicolumn">PIL.Image<br>
+</td><td class="multicolumn">PIL.ImageDraw<br>
+</td><td class="multicolumn">hashlib<br>
+</td><td class="multicolumn">numpy<br>
 </td></tr></table></td></tr></table><p>
 <table class="section">
 <tr class="decor functions-decor heading-text">
 <td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
     
 <tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
-<td class="singlecolumn"><dl><dt><a name="-rasterize"><strong>rasterize</strong></a>(annotation, size)</dt><dd><span class="code">Rasterize&nbsp;integer&nbsp;pixel-centre&nbsp;polygons&nbsp;with&nbsp;Pillow's&nbsp;inclusive&nbsp;fill.<br>
+<td class="singlecolumn"><dl><dt><a name="-quality_checks"><strong>quality_checks</strong></a>(
+    mask,
+    graph,
+    checkpoints=(),
+    small_component_pixels=12,
+    short_terminal_length=8.0,
+    near_endpoint_distance=12.0
+)</dt><dd><span class="code">Review&nbsp;prompts&nbsp;only:&nbsp;no&nbsp;RGB&nbsp;understanding,&nbsp;pruning&nbsp;or&nbsp;gap&nbsp;completion.<br>
+&nbsp;<br>
+Visible-required&nbsp;/&nbsp;occluded-excluded&nbsp;point&nbsp;checks&nbsp;test&nbsp;only&nbsp;supplied&nbsp;points,<br>
+not&nbsp;region&nbsp;completeness.&nbsp;Thresholds&nbsp;use&nbsp;native&nbsp;pixels,&nbsp;not&nbsp;physical&nbsp;units.</span></dd></dl>
+ <dl><dt><a name="-rasterize"><strong>rasterize</strong></a>(annotation, size)</dt><dd><span class="code">Rasterize&nbsp;integer&nbsp;pixel-centre&nbsp;polygons&nbsp;with&nbsp;Pillow's&nbsp;inclusive&nbsp;fill.<br>
 &nbsp;<br>
 All&nbsp;geometry&nbsp;is&nbsp;recorded&nbsp;explicitly;&nbsp;no&nbsp;morphology&nbsp;or&nbsp;GT&nbsp;alignment&nbsp;is&nbsp;used.</span></dd></dl>
+ <dl><dt><a name="-reset_review"><strong>reset_review</strong></a>(annotation)</dt><dd><span class="code">Geometry&nbsp;changes&nbsp;invalidate&nbsp;any&nbsp;previous&nbsp;review/approval&nbsp;declaration.</span></dd></dl>
  <dl><dt><a name="-verify_source"><strong>verify_source</strong></a>(annotation, rgb_path)</dt><dd><span class="code">Bind&nbsp;annotation&nbsp;coordinates&nbsp;to&nbsp;exact&nbsp;RGB&nbsp;bytes;&nbsp;no&nbsp;filename-only&nbsp;pairing.</span></dd></dl>
 </td></tr></table><p>
 <table class="section">

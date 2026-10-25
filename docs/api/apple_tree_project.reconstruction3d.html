@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module apple_tree_project.reconstruction3d</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="apple_tree_project.html" class="white">apple_tree_project</a>.reconstruction3d</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="../../src/apple_tree_project/reconstruction3d.py">../../src/apple_tree_project/reconstruction3d.py</a></td></tr></table>
+    <p><span class="code">Explicit-calibration&nbsp;camera&nbsp;lifting;&nbsp;no&nbsp;implicit&nbsp;real-data&nbsp;depth&nbsp;decoder.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn">copy<br>
+</td><td class="multicolumn">numpy<br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text">builtins.object
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="apple_tree_project.reconstruction3d.html#Calibration">Calibration</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Calibration">class <strong>Calibration</strong></a>(builtins.object)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Calibration">Calibration</a>(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;width:&nbsp;'int',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;height:&nbsp;'int',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fx:&nbsp;'float',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fy:&nbsp;'float',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cx:&nbsp;'float',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cy:&nbsp;'float',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;depth_unit_to_m:&nbsp;'float',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;depth_kind:&nbsp;'str',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;invalid_values:&nbsp;'tuple',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;registered_to_skeleton:&nbsp;'bool',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rectified:&nbsp;'bool',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;evidence:&nbsp;'str',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;depth_offset_m:&nbsp;'float'&nbsp;=&nbsp;0.0<br>
+)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Caller-supplied&nbsp;evidence&nbsp;contract,&nbsp;not&nbsp;automatic&nbsp;proof&nbsp;of&nbsp;calibration.<br>
+&nbsp;<br>
+Grid&nbsp;is&nbsp;rectified&nbsp;and&nbsp;depth&nbsp;is&nbsp;registered&nbsp;to&nbsp;its&nbsp;pixels.&nbsp;Scalar&nbsp;decoding&nbsp;is<br>
+raw*depth_unit_to_m&nbsp;+&nbsp;depth_offset_m;&nbsp;nonlinear/colour&nbsp;depth&nbsp;needs&nbsp;an&nbsp;external<br>
+verified&nbsp;decoder.&nbsp;Integer&nbsp;pixel&nbsp;indices&nbsp;are&nbsp;centres;&nbsp;X&nbsp;right,Y&nbsp;down,Z&nbsp;forward.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Calibration-__delattr__"><strong>__delattr__</strong></a>(self, name)</dt><dd><span class="code">Implement&nbsp;delattr(self,&nbsp;name).</span></dd></dl>
+
+<dl><dt><a name="Calibration-__eq__"><strong>__eq__</strong></a>(self, other)</dt><dd><span class="code">Return&nbsp;self==value.</span></dd></dl>
+
+<dl><dt><a name="Calibration-__hash__"><strong>__hash__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;hash(self).</span></dd></dl>
+
+<dl><dt><a name="Calibration-__init__"><strong>__init__</strong></a>(
+    self,
+    width: 'int',
+    height: 'int',
+    fx: 'float',
+    fy: 'float',
+    cx: 'float',
+    cy: 'float',
+    depth_unit_to_m: 'float',
+    depth_kind: 'str',
+    invalid_values: 'tuple',
+    registered_to_skeleton: 'bool',
+    rectified: 'bool',
+    evidence: 'str',
+    depth_offset_m: 'float' = 0.0
+) -&gt; None</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Calibration-__post_init__"><strong>__post_init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Calibration-__replace__"><strong>__replace__</strong></a> = _replace(self, /, **changes)<span class="grey"><span class="heading-text"> from dataclasses</span></span></dt></dl>
+
+<dl><dt><a name="Calibration-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="Calibration-__setattr__"><strong>__setattr__</strong></a>(self, name, value)</dt><dd><span class="code">Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {'cx': 'float', 'cy': 'float', 'depth_kind': 'str', 'depth_offset_m': 'float', 'depth_unit_to_m': 'float', 'evidence': 'str', 'fx': 'float', 'fy': 'float', 'height': 'int', 'invalid_values': 'tuple', ...}</dl>
+
+<dl><dt><strong>__dataclass_fields__</strong> = {'cx': Field(name='cx',type='float',default=&lt;dataclasse...appingproxy({}),kw_only=False,_field_type=_FIELD), 'cy': Field(name='cy',type='float',default=&lt;dataclasse...appingproxy({}),kw_only=False,_field_type=_FIELD), 'depth_kind': Field(name='depth_kind',type='str',default=&lt;data...appingproxy({}),kw_only=False,_field_type=_FIELD), 'depth_offset_m': Field(name='depth_offset_m',type='float',default...appingproxy({}),kw_only=False,_field_type=_FIELD), 'depth_unit_to_m': Field(name='depth_unit_to_m',type='float',defaul...appingproxy({}),kw_only=False,_field_type=_FIELD), 'evidence': Field(name='evidence',type='str',default=&lt;datacl...appingproxy({}),kw_only=False,_field_type=_FIELD), 'fx': Field(name='fx',type='float',default=&lt;dataclasse...appingproxy({}),kw_only=False,_field_type=_FIELD), 'fy': Field(name='fy',type='float',default=&lt;dataclasse...appingproxy({}),kw_only=False,_field_type=_FIELD), 'height': Field(name='height',type='int',default=&lt;dataclas...appingproxy({}),kw_only=False,_field_type=_FIELD), 'invalid_values': Field(name='invalid_values',type='tuple',default...appingproxy({}),kw_only=False,_field_type=_FIELD), ...}</dl>
+
+<dl><dt><strong>__dataclass_params__</strong> = _DataclassParams(init=True,repr=True,eq=True,ord...rue,kw_only=False,slots=False,weakref_slot=False)</dl>
+
+<dl><dt><strong>__match_args__</strong> = ('width', 'height', 'fx', 'fy', 'cx', 'cy', 'depth_unit_to_m', 'depth_kind', 'invalid_values', 'registered_to_skeleton', 'rectified', 'evidence', 'depth_offset_m')</dl>
+
+<dl><dt><strong>depth_offset_m</strong> = 0.0</dl>
+
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-backproject"><strong>backproject</strong></a>(pixels, raw_values, calibration)</dt><dd><span class="code">Return&nbsp;Nx3&nbsp;metres&nbsp;and&nbsp;validity&nbsp;mask.&nbsp;Invalid&nbsp;rows&nbsp;contain&nbsp;NaN,&nbsp;never&nbsp;zero.<br>
+&nbsp;<br>
+axial_z:&nbsp;XYZ=((u-cx)/fx,(v-cy)/fy,1)*Z.<br>
+range:&nbsp;normalize&nbsp;the&nbsp;ray&nbsp;before&nbsp;multiplying&nbsp;by&nbsp;Euclidean&nbsp;range.</span></dd></dl>
+ <dl><dt><a name="-lift_skeleton"><strong>lift_skeleton</strong></a>(
+    graph,
+    depth,
+    calibration,
+    branch_support,
+    *,
+    infer_hidden_depth=False,
+    max_endpoint_z_difference_m=0.5
+)</dt><dd><span class="code">Lift&nbsp;Step&nbsp;3/4&nbsp;graph&nbsp;without&nbsp;modifying&nbsp;it&nbsp;or&nbsp;the&nbsp;supplied&nbsp;depth/support.<br>
+&nbsp;<br>
+Measured&nbsp;=&nbsp;observed&nbsp;node&nbsp;+&nbsp;explicit&nbsp;branch-support&nbsp;evidence&nbsp;+&nbsp;valid&nbsp;depth.<br>
+Inferred&nbsp;nodes&nbsp;NEVER&nbsp;read&nbsp;image&nbsp;depth,&nbsp;even&nbsp;when&nbsp;it&nbsp;is&nbsp;finite/nonzero.<br>
+Optional&nbsp;hidden&nbsp;Z&nbsp;interpolation&nbsp;requires&nbsp;a&nbsp;simple&nbsp;inferred&nbsp;chain&nbsp;with&nbsp;exactly<br>
+two&nbsp;measured&nbsp;boundary&nbsp;anchors.&nbsp;All&nbsp;other&nbsp;coordinates&nbsp;stay&nbsp;unsupported/null.<br>
+Surface&nbsp;depth&nbsp;at&nbsp;a&nbsp;visible&nbsp;centreline&nbsp;is&nbsp;a&nbsp;surface&nbsp;proxy,&nbsp;not&nbsp;wood-axis&nbsp;GT.</span></dd></dl>
+ <dl><dt><a name="-nonmetric_demo"><strong>nonmetric_demo</strong></a>(graph, stored_codes, image_shape)</dt><dd><span class="code">Image/code&nbsp;relief&nbsp;only.&nbsp;Physical&nbsp;XYZ&nbsp;is&nbsp;null&nbsp;for&nbsp;every&nbsp;real-data&nbsp;node.<br>
+&nbsp;<br>
+Display&nbsp;coordinates&nbsp;are&nbsp;u/(W-1),&nbsp;1-v/(H-1),&nbsp;code/255,&nbsp;with&nbsp;NO&nbsp;pinhole&nbsp;camera,<br>
+depth&nbsp;decoding&nbsp;or&nbsp;registration&nbsp;claim.&nbsp;Hidden&nbsp;display&nbsp;points&nbsp;use&nbsp;plane&nbsp;z=0<br>
+only&nbsp;as&nbsp;an&nbsp;annotation&nbsp;carrier;&nbsp;their&nbsp;depth&nbsp;code&nbsp;is&nbsp;never&nbsp;sampled.</span></dd></dl>
+</td></tr></table>
+</body></html>

@@ -1,0 +1,41 @@
+{
+  "reference_commit": "a7211681d62a36c55320b091176fdb4fd6ae7e31",
+  "branch": "main",
+  "remote_main_at_audit": "a7211681d62a36c55320b091176fdb4fd6ae7e31",
+  "workspace_tests": {
+    "tests": 171,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "isolated_install_tests": {
+    "tests": 171,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "dependencies": {
+    "numpy": "2.3.4",
+    "Pillow": "12.0.0",
+    "pytest": "9.1.1",
+    "matplotlib": "3.10.7"
+  },
+  "api_modules": 10,
+  "public_documented_definitions": 31,
+  "api_coverage_source_hashes_page_hashes_and_local_links_passed": true,
+  "clean_install_and_pip_check_passed": true,
+  "source_only_demo_passed": true,
+  "algorithms_and_existing_tests_byte_unchanged": true,
+  "preservation": {
+    "files_checked": 11410,
+    "sha256_size_mtime_unchanged": true
+  },
+  "original_license_sha256": "1746a327a82943516d1101f3a930c096dfb1ab39a37c7674248357ca9d098cd9",
+  "raw_or_generated_results_tracked": false,
+  "real_metric_reconstruction_supported": false,
+  "student_review_pending": true,
+  "step7_changes_committed": false,
+  "commit_or_push": false,
+  "git_diff_check_passed": true
+}

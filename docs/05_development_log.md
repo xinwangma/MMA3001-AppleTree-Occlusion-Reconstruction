@@ -71,3 +71,24 @@ Fixed conservative numerical boundary policy; frozen inputs/plan preserved. Audi
 ## 2026-10-25 — Step 6.1 fork-anchored matching
 
 Completed the interrupted detector, 24-case development and frozen 96-case evaluation, with unchanged fitters and angular policy. Saved five-method metrics, historical error/rejection audit, real draft gallery, 480-graph observation replay and original-evidence preservation checks. Full suite: 171 passed. See docs/17_step61_fork_matching.md. No real accuracy claim, commit or push.
+
+
+## Step 7 — final repository preparation (pending review)
+
+Inspected the actual 15-page 2026 Brief; verified local/remote main at a721168.
+Replaced outdated README/setup guidance; regenerated all 10 API pages with an
+index and freshness/link checks; added submission audit, zipped-clone procedure,
+tested constraints and compact frozen numeric evidence. Workspace and clean-venv
+snapshot each pass 171 tests; installed demo and pip check pass. Source algorithms,
+tests, raw RGB-D and archived experiments are unchanged. No commit or push.
+See docs/18_step7_repository_audit.md for remaining student deliverables and issues.
+
+
+## Completed Step 1–6.1 repository repair
+
+Retired 61 temporary Python modules/scripts and 59 bytecode files used only by
+repository preparation/PDF extraction. Preserved their backup, all academic
+documents, original algorithms, tests, datasets, historical results and archives.
+Verified current API/README, Matplotlib setup, 171 tests in workspace and repaired
+fresh clone, and saved-result replay (600 metric rows / 480 evaluation graphs).
+No optimisation, commit or push. See docs/21_repository_repair.md.

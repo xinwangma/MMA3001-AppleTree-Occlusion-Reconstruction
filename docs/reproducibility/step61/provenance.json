@@ -1,0 +1,58 @@
+[
+  {
+    "file": "metrics.json",
+    "source": "results/step61_fork_matching/comparison_summary.json",
+    "sha256": "a63137386ee78d4aa63bf0e0a98d0678f7fc7f52670737cacf6d00cbd2ce3c11"
+  },
+  {
+    "file": "paired_comparison.json",
+    "source": "results/step61_fork_matching/paired_comparison.json",
+    "sha256": "af4fa76a449c5480fb88442fae0eabbdf3984a49955149584d19bf5edc2110ab"
+  },
+  {
+    "file": "frozen_plan.json",
+    "source": "results/step61_fork_matching/frozen_plan.json",
+    "sha256": "ddb7a07d13a0d1a6994e47d401b60786b6f7c873bc1270b9cc024b317b4b9593"
+  },
+  {
+    "file": "holdout39.png",
+    "source": "results/step61_fork_matching/holdout39.png",
+    "sha256": "e0000f9e9a2781accc2276b8bb1d98b8cd88099a082c62a673dd6f67b3c4ba21"
+  },
+  {
+    "file": "evaluation_000.png",
+    "source": "results/step61_fork_matching/evaluation/evaluation_000/comparison.png",
+    "sha256": "f5cee848a02f639d437725712ba9e5ea98eeea36bf8f145e53abb6d93ba4ee59",
+    "selection_reason": "All methods refuse; example of the all-case denominator"
+  },
+  {
+    "file": "evaluation_003.png",
+    "source": "results/step61_fork_matching/evaluation/evaluation_003/comparison.png",
+    "sha256": "dbe0c0e92c02a44bcdd35e6f1abd339daf7294d0de9958a3cacdd55842cb70e4",
+    "selection_reason": "A case accepted by original and anchored matching"
+  },
+  {
+    "file": "evaluation_018.png",
+    "source": "results/step61_fork_matching/evaluation/evaluation_018/comparison.png",
+    "sha256": "47c65ece7012fccc1b38bd7e7bbc1061aa8e5f1aac9ccf3f46ea5ce732d12393",
+    "selection_reason": "Accepted by original matching, refused by anchored matching"
+  },
+  {
+    "file": "evaluation_031.png",
+    "source": "results/step61_fork_matching/evaluation/evaluation_031/comparison.png",
+    "sha256": "0655c8d04b7c50b932ad3f29de233ee5b4d9969db188fdb06d171b423fe8ad0d",
+    "selection_reason": "Accepted by anchored matching, refused by original matching"
+  },
+  {
+    "file": "evaluation_053.png",
+    "source": "results/step61_fork_matching/evaluation/evaluation_053/comparison.png",
+    "sha256": "6db0c5c4843e5d5813eed366e8f69745e6ab11ab8d8080b782db7af231efd25f",
+    "selection_reason": "Original Quadratic incorrect connection"
+  },
+  {
+    "file": "evaluation_066.png",
+    "source": "results/step61_fork_matching/evaluation/evaluation_066/comparison.png",
+    "sha256": "391c9bf624a27b26f6ed8950495da2a929f6cd606d9050b83b5b5bd6af2d8e34",
+    "selection_reason": "Another anchored-only accepted case"
+  }
+]
