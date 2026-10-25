@@ -2,10 +2,10 @@
 
 **MMA3001 | Numerical Methods and Machine Learning**  
 **Project type:** Individual engineering computing project  
-**Development status:** Step 4 - conservative 2D gap completion and synthetic evaluation; real-data validation pending
+**Development status:** Step 5 - calibrated synthetic 3D lifting implemented; real metric 3D unsupported pending calibration
 **Version:** 0.1.0
 
-> **Important:** Linear and quadratic 2D gap completion are implemented and tested on synthetic Y trees. The 12 real RGB draft examples are qualitative hypotheses only, not verified ground truth or evidence of real-data accuracy. Metric 3D reconstruction remains unimplemented. See [Step 4 report](docs/14_step4_branch_completion.md) and the [results gallery](results/step4_occlusion_completion/index.html).
+> **Important:** Linear and quadratic 2D gap completion are implemented and tested on synthetic Y trees. The 12 real RGB draft examples are qualitative hypotheses only, not verified ground truth or evidence of real-data accuracy. Calibrated 3D lifting is validated on synthetic trees; real metric 3D remains unsupported because depth decoding, calibration and registration are unverified. See [Step 5 report](docs/15_step5_3d_reconstruction.md) and [3D gallery](results/step5_3d_reconstruction/index.html). See [Step 4 report](docs/14_step4_branch_completion.md) and the [results gallery](results/step4_occlusion_completion/index.html).
 
 ## 1. Project overview
 
