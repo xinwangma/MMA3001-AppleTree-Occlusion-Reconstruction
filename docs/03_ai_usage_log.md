@@ -65,3 +65,8 @@ not student drawing or independent human review. More visible pixels do not prov
 accuracy. No Summer GT/depth was used to make masks, no hidden connections were
 added and no original RGB-D was written. 63 tests pass; human usability and full
 coverage review still require actual people. Details: docs/13_step3_annotation_revision.md.
+
+
+## 2026-10-25 — Step 6.1 interrupted-work recovery
+
+Codex recovered the uncommitted fork-anchored detector/tests/evaluation script, ran development and frozen evaluation, and generated evidence-based documentation. Initial test setup errors were due to a missing temporary parent and then the raw-output protection gate; using an external temporary directory produced 171 passing tests without algorithm changes. Synthetic results and AI draft real-image hypotheses require student review; no human acceptance or real calibration is implied.

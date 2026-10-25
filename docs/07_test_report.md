@@ -79,3 +79,8 @@ checked. The 12 final real runs preserve input components, with no outside skele
 pixels, isolated pixels or graph cycles. These checks are not independent label
 or anatomical accuracy validation. Human GUI usability acceptance remains pending.
 See [the revision guide](13_step3_annotation_revision.md).
+
+
+## Step 6.1 — 2026-10-25
+
+171 tests passed. New matching tests cover successful anchored bridges, missing/multiple forks, reflection, absent occlusion evidence, conservative angular boundaries, input preservation and invalid settings. The full suite uses a temporary directory outside data/raw, as the baseline deliberately rejects raw-data output paths. Saved evaluation replay verifies 480 graphs. See the Step 6.1 report for experimental limitations.

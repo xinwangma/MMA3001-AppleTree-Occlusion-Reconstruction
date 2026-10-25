@@ -66,3 +66,8 @@ Step 6 runtime interpretation audit: original timing inputs had zero candidates;
 ## Step 6 v2 angular boundary stability
 
 Fixed conservative numerical boundary policy; frozen inputs/plan preserved. Audited 234 graphs against archived v1 source and current policy, regenerated affected outputs in a new version, checked +/-1e-12 degree decision perturbations and holdout_19. Full suite: {"tests": 160, "failures": 0, "errors": 0, "skipped": 0, "passed": 160}. Original data/results/ZIP unchanged. See docs/16_step6_numerical_stability.md. No commit/push or Step7.
+
+
+## 2026-10-25 — Step 6.1 fork-anchored matching
+
+Completed the interrupted detector, 24-case development and frozen 96-case evaluation, with unchanged fitters and angular policy. Saved five-method metrics, historical error/rejection audit, real draft gallery, 480-graph observation replay and original-evidence preservation checks. Full suite: 171 passed. See docs/17_step61_fork_matching.md. No real accuracy claim, commit or push.

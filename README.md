@@ -213,3 +213,8 @@ Paired comparison of visible-only, linear and quadratic methods reuses Step 4/5 
 ### Step 6 v2 numerical boundary policy
 
 Use [the current numerical stability report](docs/16_step6_numerical_stability.md) and [v2 gallery](results/step6_final_validation_v2_boundary_policy/index.html). Earlier Step 6 tables/ZIP are preserved v1 history. Angular comparisons reject the fixed ±0.00001 degree ambiguity band. No threshold retuning or real metric 3D claims.
+
+
+### Step 6.1 fork-anchored matching
+
+The frozen 96-case synthetic comparison of fork-anchored and original matching is complete. See [report](docs/17_step61_fork_matching.md) and [gallery](results/step61_fork_matching/index.html). All 12 real masks remain AI DRAFT; no real metric 3D accuracy is claimed. Full suite: 171 passed.
